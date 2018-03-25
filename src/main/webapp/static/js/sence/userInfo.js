@@ -4,11 +4,9 @@
 /**
  * Created by anke on 2017/9/11.
  */
-
 window.onload = function () {
-
     $.ajax({
-        url: "/mushroomGreenHouseGraduateDesign/user/userInfo.action",
+        url: "/mushRoomGH/userInfo",
         type: "GET",
         dataType: "JSON",
         data: {},
@@ -16,8 +14,8 @@ window.onload = function () {
             console.log(data.data);
             console.log(data.data.typeof);
             $.each(data.data, function (index, value) {
-                var url1 = "/mushroomGreenHouseGraduateDesign/user/echarts_bingtu.action?lat=" + value.mushroomLat + "&lng=" + value.mushroomLong;
-                var url2 = "/mushroomGreenHouseGraduateDesign/user/echarts_bingtu.action?userId=" + value.userId;
+                var url1 = "/mushRoomGH/echarts_bingtu?lat=" + value.mushroomLat + "&lng=" + value.mushroomLong;
+                var url2 = "/mushRoomGH/echarts_bingtu?userId=" + value.userId;
                 var tab =
                     '<tr>'
                     + "<td>" + value.mushroomPointid + "</td>"
@@ -39,5 +37,4 @@ window.onload = function () {
             alert("error");
         }
     });
-
 }
