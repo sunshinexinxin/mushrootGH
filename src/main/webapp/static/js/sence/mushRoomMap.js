@@ -7,7 +7,6 @@ window.onload = function () {
     var map;
     var pointCent;
 
-
     $.ajax({
         url: "/mushRoomGH/mushRoomMapData",
         type: "GET",
@@ -26,7 +25,7 @@ window.onload = function () {
             var obj1 = eval("(" + data.data + ")");
             $.each(obj1, function (index, value) {
                 // console.log("lat:" + value[1] + "\tlng:" + value[0]);
-                addMarker(new BMap.Point(value[1], value[0]));
+                addMarker(new BMap.Point(value[1], value[0]), value[2]);
             });
 
         },
@@ -36,25 +35,39 @@ window.onload = function () {
         }
     });
 
-
-    //右键地图点事件
-    function detailMarker(marker) {
-        // alert(marker.lat + "\t" + marker.lng);
-        window.location.href = "/mushRoomGH/echarts_bingtu?lat=" + marker.lat + "&lng=" + marker.lng;
-    }
-
     //创建标注
-    function addMarker(point) {
+    function addMarker(point, content) {
         //地图标注icon
         var myIcon = new BMap.Icon("/static/image/mushroom.ico", new BMap.Size(24, 24));
         var marker = new BMap.Marker(point, {icon: myIcon});  // 创建标注
-        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
-
-        //创建右键菜单
-        var markerMenu = new BMap.ContextMenu();
-        markerMenu.addItem(new BMap.MenuItem('查看详情', detailMarker.bind(marker)));
+        marker.setAnimation(BMAP_ANIMATION_DROP); //跳动的动画
         map.addOverlay(marker);// 将标注添加到地图中
 
-        marker.addContextMenu(markerMenu);
+        addClickHandler(content, marker);
     }
+
+    var opts = {
+        width: 250,     // 信息窗口宽度
+        height: 80,     // 信息窗口高度
+        title: "基地信息", // 信息窗口标题
+        enableMessage: true//设置允许信息窗发送短息
+    };
+
+
+    function addClickHandler(content, marker) {
+        marker.addEventListener("mouseover", function (e) {
+            openInfo(content, e)
+        });
+        marker.addEventListener("mouseout", function () {
+            map.closeInfoWindow();
+        });
+    }
+
+    function openInfo(content, e) {
+        var p = e.target;
+        var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+        var infoWindow = new BMap.InfoWindow(content, opts);  // 创建信息窗口对象
+        map.openInfoWindow(infoWindow, point); //开启信息窗口
+    }
+
 }
