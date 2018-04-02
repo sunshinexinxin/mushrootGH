@@ -1,7 +1,6 @@
 package com.hyx.apps.sence.bean;
 
 /**
- *
  * @author anke
  * @date 2017/4/22
  */

@@ -1,10 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%-- Struts2标签引入 --%>
-<%--<%@ taglib prefix="s" uri="/struts-tags" %>--%>
-<%--<%--%>
-    <%--String path = request.getContextPath();--%>
-    <%--String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";--%>
-<%--%>--%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -74,7 +68,7 @@
     </div>
     <br><br><br>
     <span>
-        <form action="/mushRoomGH/login" method="post">
+        <form action="/mushRoomGH/login/" method="post">
             <input type="text" name="userName" id="userName" value="" placeholder="用户名"/>
             <input type="password" name="userPwd" id="userPwd" value="" placeholder="密&nbsp码"/><br/>
             <input type="submit" value="登录" class='btn btn-default btn-lg' id="login"/>

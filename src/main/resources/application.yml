@@ -2,7 +2,7 @@ spring:
   mvc:
     view:
       #返回的前缀   目录对应src/main/webapp下
-      prefix: /WEB-INF/
+      prefix: /WEB-INF/jsp/
       #返回的后缀
       suffix: .jsp
   #禁止thymeleaf缓存（建议：开发环境设置为false，生成环境设置为true）
@@ -24,28 +24,4 @@ mybatis:
   type-aliases-package: com.hyx.apps.login.bean
   config-locations: classpath:/mybatis/mybatis-config.xml
   mapper-locations: classpath:/mybatis/mapper/*.xml
-#  mapperLocations: classpath:/mybatis/mapper/*.xml
-#  typeAliasesPackage: com.hyx.apps.login.bean
 #更多配置请参见：http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
-
-
-#
-#spring:
-#  datasource:
-#    driverClassName: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://127.0.0.1:3306/graduate
-#    username: root
-#    password: 123456
-#    cachePrepStmts: true
-#    prepStmtsSize: 250
-#    prepStmtsCacheSqlLimit: 2048
-#    userServerPrepStmts: true
-#  http:
-#    encoding.charset: UTF-8
-#    encoding.enable: true
-#    encoding.force: true
-
-#mybatis:
-#  type-aliases-package: com.ads.model
-#  config-locations: classpath:/mybatis/mybatis-config.xml
-#  mapper-locations: classpath:/mybatis/mapper/*.xml

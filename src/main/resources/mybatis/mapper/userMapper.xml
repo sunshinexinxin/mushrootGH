@@ -19,5 +19,5 @@
     <select id="getUserByName" parameterType="String" resultMap="userMap">
         select * from TB_MRGH_USERS WHERE user_name = #{name,jdbcType=NVARCHAR}
     </select>
-
 </mapper>
+
