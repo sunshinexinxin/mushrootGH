@@ -41,8 +41,9 @@ public class HomeDataCrontroller {
         List resuList = new ArrayList();
         for (int i = 0; i < mushRoomList.size(); i++) {
             List resuLists = new ArrayList();
-            resuLists.add(mushRoomList.get(i).getMushroomLat());
-            resuLists.add(mushRoomList.get(i).getMushroomLong());
+            resuLists.add("\"" + mushRoomList.get(i).getMushroomLat() + "\"");
+            resuLists.add("\"" + mushRoomList.get(i).getMushroomLong() + "\"");
+            resuLists.add("\"" + mushRoomList.get(i).getMushroomName() + "\"");
             resuList.add(resuLists);
         }
         resuData.setData(resuList.toString());
@@ -82,54 +83,8 @@ public class HomeDataCrontroller {
 
     @RequestMapping(value = "/echarts_temp_wetData", method = RequestMethod.GET)
     public ResuData echarts_temp_wet() {  //TODO 该方法的逻辑还有问题，js页面需要修改
-        List<ChartsCollectionBean> tempWetList = chartsService.getTempWetListById("00020"); //TODO 该出需要修改成获取值
-        //空气温度
-        List<String> airTempList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            airTempList.add(key.getMushroomAirtemp());
-        }
-        //空气湿度
-        List<String> airhumidityList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            airhumidityList.add(key.getMushroomAirhumidity());
-        }
-        //土壤温度
-        List<String> soiltempList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            soiltempList.add(key.getMushroomSoiltemp());
-        }
-        //土壤湿度
-        List<String> soilmoistureList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            soilmoistureList.add(key.getMushroomSoilmoisture());
-        }
-
-        //光照强度
-        List<String> ightintensityList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            ightintensityList.add(key.getMushroomIghtintensity());
-        }
-
-        //二氧化碳浓度
-        List<String> co2densutyList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            co2densutyList.add(key.getMushroomCo2densuty());
-        }
-        //时间
-        List<String> timeList = new ArrayList<>();
-        for (ChartsCollectionBean key : tempWetList) {
-            String shi = key.getCtime().substring(8, 10);
-            String fen = key.getCtime().substring(10, 12);
-            timeList.add("'" + shi + ":" + fen + "'");
-        }
-        request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        request.getSession().setAttribute("airTempList", airTempList);
-        request.getSession().setAttribute("airhumidityList", airhumidityList);
-        request.getSession().setAttribute("soiltempList", soiltempList);
-        request.getSession().setAttribute("soilmoistureList", soilmoistureList);
-        request.getSession().setAttribute("ightintensityList", ightintensityList);
-        request.getSession().setAttribute("co2densutyList", co2densutyList);
-        request.getSession().setAttribute("timeList", timeList);
-        return null;
+        List<ChartsCollectionBean> tempWetList = chartsService.getTempWetListById("00011"); //TODO 该出需要修改成获取值
+        resuData.setData(tempWetList);
+        return resuData;
     }
 }
