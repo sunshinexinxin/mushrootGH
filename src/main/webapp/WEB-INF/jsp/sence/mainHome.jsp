@@ -51,15 +51,11 @@
                     <ul class="kidc">
                         <li>
                             <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Maintain-add.html">预留菜单</a>
+                                                  href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
                         </li>
                         <li>
                             <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Maintain-edit.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Maintain-del.html">预留菜单</a>
+                                                  href="/static/main/Template/Maintain-edit.html">历史视频数据</a>
                         </li>
                     </ul>
                 </li>
