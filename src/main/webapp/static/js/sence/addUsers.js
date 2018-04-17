@@ -82,7 +82,7 @@ window.onload = function () {
                     userID: userId
                 },
                 success: function (data, flag) {
-                    console.log(data);
+                    // console.log(data);
                     if (data.status == 200) {
                         $("#" + userId + "").hide();
                     } else {
@@ -98,7 +98,7 @@ window.onload = function () {
     })
 
     function GetRequest(url) {
-        console.log(url);
+        // console.log(url);
         var theRequest = new Object();
         if (url.indexOf("?") != -1) {
             var str = url.substr(url.indexOf("?") + 1);
