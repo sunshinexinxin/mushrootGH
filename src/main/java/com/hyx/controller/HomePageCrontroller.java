@@ -107,4 +107,10 @@ public class HomePageCrontroller {
     public String userInfo() {
         return "/sence/userInfo";
     }
+
+
+    @RequestMapping(value = "/realTimeCameraPage", method = RequestMethod.GET)
+    public String cameraPage() {
+        return "/sence/realTimeCamera";
+    }
 }

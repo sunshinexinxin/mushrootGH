@@ -8,7 +8,7 @@ window.onload = function () {
         dataType: "JSON",
         data: {},
         success: function (data, flag) {
-            console.log(data.data);
+            //console.log(data.data);
             var airTempList = [], //空气温度
                 airhumidityList = [],//空气湿度
                 soiltempList = [],//土壤温度
@@ -25,13 +25,13 @@ window.onload = function () {
                 co2densutyList.push(value.mushroomCo2densuty);
                 ctimeList.push(value.ctime.substr(8, 2) + ":" + value.ctime.substr(10, 2));
             });
-            console.log(airTempList);
-            console.log(airhumidityList);
-            console.log(soiltempList);
-            console.log(soilmoistureList);
-            console.log(ightintensityList);
-            console.log(co2densutyList);
-            console.log(ctimeList);
+            // console.log(airTempList);
+            // console.log(airhumidityList);
+            // console.log(soiltempList);
+            // console.log(soilmoistureList);
+            // console.log(ightintensityList);
+            // console.log(co2densutyList);
+            // console.log(ctimeList);
 
 
             var myChart = echarts.init(document.getElementById('main_echarts_temp_wet'));

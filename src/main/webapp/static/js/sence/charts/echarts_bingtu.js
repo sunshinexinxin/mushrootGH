@@ -5,8 +5,8 @@
 
 
 
-console.log("lat" + GetRequest().lat);
-console.log("lng" + GetRequest().lng);
+// console.log("lat" + GetRequest().lat);
+// console.log("lng" + GetRequest().lng);
 
 function GetRequest() {
     var url = location.search; //获取url中"?"符后的字串

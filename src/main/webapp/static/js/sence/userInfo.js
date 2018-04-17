@@ -11,8 +11,8 @@ window.onload = function () {
         dataType: "JSON",
         data: {},
         success: function (data, flag) {
-            console.log(data.data);
-            console.log(data.data.typeof);
+            // console.log(data.data);
+            // console.log(data.data.typeof);
             $.each(data.data, function (index, value) {
                 var url1 = "/mushRoomGH/echarts_bingtu?lat=" + value.mushroomLat + "&lng=" + value.mushroomLong;
                 var url2 = "/mushRoomGH/echarts_bingtu?userId=" + value.userId;
