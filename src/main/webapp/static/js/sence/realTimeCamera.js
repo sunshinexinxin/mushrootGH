@@ -56,6 +56,7 @@ var context = canvas.getContext("2d");
 //利用canvas 将当前video的画面画到canvas标签节点中
 document.getElementById("paizhao").addEventListener("click", function () {
     context.drawImage(video, 0, 0, 640, 480);
+    $("#downImg").show();
 });
 
 
