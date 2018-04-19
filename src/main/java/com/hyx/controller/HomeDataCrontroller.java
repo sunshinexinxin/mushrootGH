@@ -15,6 +15,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,4 +88,16 @@ public class HomeDataCrontroller {
         resuData.setData(tempWetList);
         return resuData;
     }
+
+    /**
+     * 上传视频截图
+     *
+     * @return
+     */
+    @RequestMapping(value = "/sendCanvasIamge", method = RequestMethod.POST)
+    public ResuData sendCanvasIamge(String image, String imgName, String imgTime, String imgBase, String imgUserName, String imgUserId, String imgMess) throws IOException {
+        resuData.setData(image);
+        return resuData;
+    }
+
 }

@@ -1,5 +1,5 @@
 #id1 {
-    background-color: #eeeeee;
+    /*background-color: #eeeeee;*/
     height: 420px;
     width: 1282px;
     float: left;
@@ -25,10 +25,6 @@
     margin-top: 0px;
 }
 
-#downImg {
-    display: none;
-}
-
 #video {
     height: 100%;
     width: 100%;
@@ -48,6 +44,7 @@
 }
 
 #id5 {
+    background-color: #eeeeee;
     height: 100%;
     width: 640px;
     float: right;
@@ -74,8 +71,9 @@
     text-align: center;
 }
 
-#downImg {
+#sendImg {
     float: none;
+    display: none;
     margin-bottom: 0px;
 }
 
