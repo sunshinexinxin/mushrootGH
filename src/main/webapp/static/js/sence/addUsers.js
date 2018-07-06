@@ -7,7 +7,7 @@ window.onload = function () {
         var status = $("#status").val();
         var userID = $("#userID").val();
         $.ajax({
-            url: "/mushroomGreenHouseGraduateDesign/user/getUsers.action",
+            url: "/mushRoomGH/getUsers",
             type: "GET",
             dataType: "JSON",
             data: {

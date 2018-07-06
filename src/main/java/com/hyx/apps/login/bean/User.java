@@ -2,6 +2,9 @@ package com.hyx.apps.login.bean;
 
 import com.hyx.apps.sence.bean.Monitor;
 
+/**
+ * @author anke
+ */
 public class User {
 
     //用户id

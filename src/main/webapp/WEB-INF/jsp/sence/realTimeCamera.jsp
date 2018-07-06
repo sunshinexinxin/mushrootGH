@@ -23,6 +23,10 @@
     <div id="id5" style="display: none">
         <div id="id6">
             <canvas id="canvas" width="640" height="480"></canvas>
+            <input id='imgBase' value='' type="hidden">
+            <input id='imgMushRoom' value='' type="hidden">
+            <input id='userName' value='${userBean.getUserName()}' type="hidden">
+            <input id='userId' value='${userBean.getUserId()}' type="hidden">
         </div>
         <div id="id7">
             <button id="sendImg" onClick="sendCanvasIamge()" type="button" class="btn btn-primary">上传图片</button>

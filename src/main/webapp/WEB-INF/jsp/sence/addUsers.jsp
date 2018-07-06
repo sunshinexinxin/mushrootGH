@@ -3,15 +3,15 @@
 <head>
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/min/Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/main/min/Styles/bootstrap.min.css"/>
 
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/formui.css"/>
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css"/>
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/base.css"/>
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/main/Styles/formui.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/main/Styles/admin-all.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/main/Styles/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
 
-    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
-    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="/static/main/Scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
 
 </head>
 <body>
@@ -92,7 +92,7 @@
 </div>
 
 
-<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/addUsers.js"></script>
+<script type="text/javascript" src="/static/js/sence/addUsers.js"></script>
 </body>
 
 

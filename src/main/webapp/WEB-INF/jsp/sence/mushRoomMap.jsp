@@ -23,7 +23,7 @@
 </head>
 <body>
 <div id="allmap">
-    <%--<input type="hidden" id="resuData" value=${resuData}/>--%>
+    <%--<input type="hidden" id="responseBean" value=${responseBean}/>--%>
 </div>
 <script type="text/javascript" src="/static/js/sence/mushRoomMap.js"></script>
 </body>

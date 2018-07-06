@@ -4,11 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hyx</groupId>
-    <artifactId>mushroot</artifactId>
+    <artifactId>mushRoomGH</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <!--<packaging>jar</packaging>-->
 
-    <name>mushroot</name>
+    <name>mushroom</name>
     <description>mushroomGH</description>
 
     <parent>
@@ -145,6 +146,16 @@
             <artifactId>poi</artifactId>
             <version>3.15</version>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>
@@ -172,6 +183,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>com.hyx.MushrootApplication</mainClass>
                     <!-- maven或者gradle的build插件启动实现自动重启 -->
                     <fork>true</fork>
                 </configuration>

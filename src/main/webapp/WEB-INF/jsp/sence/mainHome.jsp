@@ -55,7 +55,7 @@
                         </li>
                         <li>
                             <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Maintain-edit.html">历史视频数据</a>
+                                                  href="/mushRoomGH/seeHistorImages">历史视频数据</a>
                         </li>
                     </ul>
                 </li>
@@ -233,7 +233,7 @@
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/usersManage.action">系统用户配置</a>
+                                              href="/mushRoomGH/addUserPage">系统用户配置</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"

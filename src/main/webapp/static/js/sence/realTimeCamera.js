@@ -75,29 +75,35 @@ function convertCanvasToImage(canvas) {
 
 // 上传Canvas元素的图片
 function sendCanvasIamge() {
+    var time = Date.parse(new Date());
+
     var image = convertCanvasToImage(canvas);
-    var imgName = '';
-    var imgBase = '';
-    var imgUserName = '';
-    var imgUserId = '';
-    var imgMess = '';
+    var imgBase = $('#imgBase').val();
+    var imgMushRoom = $('#imgMushRoom').val();
+    var imgName = "img_" + time;
+    var imgUserName = $('#userName').val();
+    var imgUserId = $('#userId').val();
+    var imgTime = time;
+    var imgMess = $('#imgMess').val();
     $.ajax({
         type: 'POST',
         url: "/mushRoomGH/sendCanvasIamge",
         data: {
             image: image,
-            imageName: imgName,
-            imageBase: imgBase,
-            imageUserName: imgUserName,
-            imageUserId: imgUserId,
-            imageMess: imgMess
+            imgBase: imgBase,
+            imgMushRoom: imgMushRoom,
+            imgName: imgName,
+            imgUserName: imgUserName,
+            imgUserId: imgUserId,
+            imgTime: imgTime,
+            imgMess: imgMess
         },
         dataType: "JSON",
         async: false,
         success: function (result) {
             alert("上传成功！");
             $('#id5').hide();
-            console.log(result.data);
+            // console.log(result.data);
             $('#id8').attr('src', result.data);
             $('#id8').show();
 

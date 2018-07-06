@@ -24,4 +24,20 @@ mybatis:
   type-aliases-package: com.hyx.apps.login.bean
   config-locations: classpath:/mybatis/mybatis-config.xml
   mapper-locations: classpath:/mybatis/mapper/*.xml
+  configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #打印sql
+server:
+  port: 8080
+
+
+
+#logging:
+#  level:
+#    com:
+#      dy:
+#        springboot:
+#          server:
+#            mapper: debug
+
+
 #更多配置请参见：http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
