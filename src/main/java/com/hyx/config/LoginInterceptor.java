@@ -1,4 +1,4 @@
-package com.hyx.core;
+package com.hyx.config;
 
 import com.hyx.common.CodeConst;
 import com.hyx.common.ResponseBean;

@@ -1,8 +1,8 @@
 package com.hyx.apps.map.service.impl;
 
+import com.hyx.apps.map.dao.MapDao;
 import com.hyx.apps.map.service.MapService;
 import com.hyx.apps.sence.bean.Monitor;
-import com.hyx.apps.map.dao.MapDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
 @Service
 public class MapServiceImpl implements MapService {
     @Autowired
-    private MapDaoImpl mapDao;
+    private MapDao mapDao;
 
     @Override
     public List<Monitor> getMapDataByUserId(String userId) {

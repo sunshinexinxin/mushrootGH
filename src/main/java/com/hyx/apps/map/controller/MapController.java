@@ -3,6 +3,7 @@ package com.hyx.apps.map.controller;
 import com.hyx.apps.map.service.MapService;
 import com.hyx.apps.sence.bean.Monitor;
 import com.hyx.common.ResponseBean;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.log4j.Logger;
@@ -23,6 +24,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/mushRoomGH")
+@Api(description = "地图信息Controller")
 public class MapController {
     protected final Logger logger = Logger.getLogger(MapController.class);
 
@@ -39,6 +41,7 @@ public class MapController {
     @RequestMapping(value = "/mushRoomMapData", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "获取地图数据", response = ResponseBean.class)
     public ResponseBean mushRoomMapData(@ApiParam(required = true) String userId) {
+        logger.info("获取地图数据");
         List<Monitor> mushRoomList = mapService.getMapDataByUserId("22010001"); //TODO 该出需要修改成获取值
         List resuList = new ArrayList();
         for (int i = 0; i < mushRoomList.size(); i++) {

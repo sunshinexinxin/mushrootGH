@@ -1,4 +1,4 @@
-package com.hyx.core;
+package com.hyx.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
