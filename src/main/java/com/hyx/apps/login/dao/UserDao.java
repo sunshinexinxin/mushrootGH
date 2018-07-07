@@ -8,10 +8,11 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2018/3/23
  */
 @Mapper
-public interface UserDao{
+public interface UserDao {
     /**
-     * 查询数据
+     * 根据用户名获取用户信息
      *
+     * @param userName
      * @return
      */
     User getUserByName(String userName);

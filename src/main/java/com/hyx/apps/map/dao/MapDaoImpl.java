@@ -1,4 +1,4 @@
-package com.hyx.apps.sence.dao.impl;
+package com.hyx.apps.map.dao;
 
 import com.hyx.apps.sence.dao.MapDao;
 import org.apache.ibatis.annotations.Mapper;

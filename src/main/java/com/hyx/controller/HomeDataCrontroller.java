@@ -6,25 +6,22 @@ import com.hyx.apps.sence.bean.Monitor;
 import com.hyx.apps.sence.bean.MonitorManagement;
 import com.hyx.apps.sence.service.BackStageManagementService;
 import com.hyx.apps.sence.service.ChartsService;
-import com.hyx.apps.sence.service.MapService;
+import com.hyx.apps.map.service.MapService;
 import com.hyx.apps.sence.service.MonitorManagementService;
 import com.hyx.common.ResponseBean;
 import com.hyx.tools.CommonUtil;
 import com.hyx.tools.StrKit;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,36 +30,22 @@ import java.util.Map;
  * @author anke
  * @date 2018/3/25
  */
-@RestController
+//RestController注解用来返回数据的，Controller用来返回模板的
+//RestController = @RestController = @Controller + @ResponseBody
+@Controller
 @RequestMapping(value = "/mushRoomGH")
 public class HomeDataCrontroller {
     protected final Logger logger = Logger.getLogger(HomeDataCrontroller.class);
+
+
     @Autowired
     private MapService mapService;
-
-    /***展示地图数据
-     *
-     * @return
-     */
-    @RequestMapping(value = "/mushRoomMapData", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "获取地图数据", response = ResponseBean.class)
-    public ResponseBean mushRoomMapData(@ApiParam(required = true) String userId) {
-        List<Monitor> mushRoomList = mapService.getMapDataByUserId("22010001"); //TODO 该出需要修改成获取值
-        List resuList = new ArrayList();
-        for (int i = 0; i < mushRoomList.size(); i++) {
-            List resuLists = new ArrayList();
-            resuLists.add("\"" + mushRoomList.get(i).getMushroomLat() + "\"");
-            resuLists.add("\"" + mushRoomList.get(i).getMushroomLong() + "\"");
-            resuLists.add("\"" + mushRoomList.get(i).getMushroomName() + "\"");
-            resuList.add(resuLists);
-        }
-        return new ResponseBean(resuList.toString());
-    }
 
     /***个人中心
      *
      * @return
      */
+    @ResponseBody
     @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
     public ResponseBean userInfo() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
