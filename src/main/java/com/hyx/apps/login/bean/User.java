@@ -7,30 +7,54 @@ import com.hyx.apps.map.bean.Monitor;
  */
 public class User {
 
-    //用户id
+    /**
+     * 用户id
+     */
     private String userId;
-    //用户姓名
+    /**
+     * 用户姓名
+     */
     private String userName;
-    //用户年龄
+    /**
+     * 用户年龄
+     */
     private String userAge;
-    //用户密码
+    /**
+     * 用户密码
+     */
     private String userPsd;
-    //用户联系方式
+    /**
+     * 用户联系方式
+     */
     private String userPhone;
-    //用户地址
+    /**
+     * 用户地址
+     */
     private String userAdd;
-    //用户身份标识.0:开发测试;1:普通用户;2:管理员
+    /**
+     * 用户身份标识.0:开发测试;1:普通用户;2:管理员
+     */
     private String status;
-    //删除标识.初始为0;删除为1.
+    /**
+     * 删除标识.初始为0;删除为1.
+     */
     private String delFlag;
-    //备注
+    /**
+     * 备注
+     */
     private String memo;
-    //创建时间
+    /**
+     * 创建时间
+     */
     private String ctime;
 
-    //大棚监控点
+    /**
+     * 大棚监控点
+     */
     private Monitor monitor;
-    //统计
+    /**
+     * 统计
+     */
     private Monitor coun;
 
 
