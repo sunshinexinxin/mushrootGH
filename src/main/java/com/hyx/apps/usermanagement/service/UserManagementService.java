@@ -4,6 +4,7 @@ package com.hyx.apps.usermanagement.service;
 import com.hyx.apps.login.bean.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author anke
@@ -15,11 +16,10 @@ public interface UserManagementService {
      * 系统后台管理-系统用户配置
      * 获取系统用户列表
      *
-     * @param userId
-     * @param status
+     * @param params
      * @return
      */
-    List<User> getUsersList(String userId, String status);
+    List<User> getUsersList(Map<String, Object> params);
 
     /**
      * 系统后台管理-系统用户配置
@@ -28,7 +28,7 @@ public interface UserManagementService {
      * @param params
      * @return
      */
-//    Integer addUsers(Map params);
+    int addUsers(Map<String, Object> params);
 
     /**
      * 系统后台管理-系统用户配置
@@ -37,6 +37,6 @@ public interface UserManagementService {
      * @param userID
      * @return
      */
-//    Integer deleteUsers(String userID);
+    Integer delUser(String userID);
 
 }

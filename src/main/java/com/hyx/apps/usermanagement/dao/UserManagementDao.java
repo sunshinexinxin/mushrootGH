@@ -21,7 +21,7 @@ public interface UserManagementDao {
      * @param params
      * @return
      */
-    List<User> getUsersList(Map<String, String> params);
+    List<User> getUsersList(Map<String, Object> params);
 
 
     /**
@@ -40,5 +40,5 @@ public interface UserManagementDao {
      * @param userId
      * @return
      */
-    Integer deleteUsers(String userId);
+    Integer delUser(String userId);
 }
