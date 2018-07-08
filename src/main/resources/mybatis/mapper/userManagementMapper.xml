@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyx.apps.usermanagement.dao.UserManagementDao">
+    <!--系统后台管理模块-添加系统用户-->
+    <resultMap id="usersList" type="com.hyx.apps.login.bean.User">
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_age" property="userAge"/>
+        <result column="user_psd" property="userPsd"/>
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_add" property="userAdd"/>
+        <result column="status" property="status"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="memo" property="memo"/>
+        <result column="ctime" property="ctime"/>
+    </resultMap>
+
+    <!--系统后台管理-系统用户配置-获取系统用户列表-->
+    <select id="getUsersList" resultMap="usersList">
+        select
+        user_id,
+        user_name,
+        user_age,
+        user_psd,
+        user_phone,
+        user_add,
+        status,
+        del_flag,
+        memo,
+        ctime
+        from tb_mrgh_users
+        where 1=1
+        and del_flag!=1
+        <if test="userId != null">
+            and user_id = #{userId,jdbcType=NVARCHAR}
+        </if>
+        <if test="status != null">
+            and status &lt;= #{status,jdbcType=INTEGER}
+        </if>
+    </select>
+
+    <!--删除系统用户 -->
+    <update id="delUser" parameterType="com.hyx.apps.login.bean.User">
+        update tb_mrgh_users set del_flag=1 where user_id = #{userId,jdbcType=NVARCHAR}
+    </update>
+
+    <!--添加系统用户 -->
+    <insert id="addUsers" parameterType="com.hyx.apps.login.bean.User">
+        insert into tb_mrgh_users
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="userAge != null">
+                user_age,
+            </if>
+            <if test="userPsd != null">
+                user_psd,
+            </if>
+            <if test="userPhone != null">
+                user_phone,
+            </if>
+            <if test="userAdd != null">
+                user_add,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="true">
+                del_flag,
+            </if>
+            <if test="memo != null">
+                memo,
+            </if>
+            <if test="ctime != null">
+                ctime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="userAge != null">
+                #{userAge,jdbcType=VARCHAR},
+            </if>
+            <if test="userPsd != null">
+                #{userPsd,jdbcType=VARCHAR},
+            </if>
+            <if test="userPhone != null">
+                #{userPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="userAdd != null">
+                #{userAdd,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="del_flag != null">
+                #{delFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="del_flag == null">
+                0,
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="ctime != null">
+                #{ctime,jdbcType=VARCHAR},
+            </if>
+            <if test="code != null">
+                #{code,jdbcType=TINYINT},
+            </if>
+            <if test="created != null">
+                #{created,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updated != null">
+                #{updated,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

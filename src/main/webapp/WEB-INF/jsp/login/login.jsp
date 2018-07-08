@@ -68,7 +68,7 @@
     </div>
     <br><br><br>
     <span>
-        <form action="/mushRoomGH/login" method="get">
+        <form action="/mushRoomGH/login" method="post">
             <input type="text" name="userName" id="userName" value="" placeholder="用户名"/>
             <input type="password" name="userPwd" id="userPwd" value="" placeholder="密&nbsp码"/><br/>
             <input type="submit" value="登录" class='btn btn-default btn-lg' id="login"/>

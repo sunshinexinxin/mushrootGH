@@ -124,7 +124,7 @@
         <div class="top-nav">
             欢迎您，${userName}！&nbsp;&nbsp;
             <a href="/mushRoomGH/userInfoPage" target="Conframe">个人中心</a> |
-            <a href="/mushRoomGH/login">安全退出</a>
+            <a href="/mushRoomGH/logout">安全退出</a>
         </div>
     </div>
     <!--头部结束-->
@@ -233,7 +233,7 @@
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/addUserPage">系统用户配置</a>
+                                              href="/mushRoomGH/userManagementPage">系统用户配置</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"

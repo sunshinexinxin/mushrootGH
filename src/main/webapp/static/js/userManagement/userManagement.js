@@ -15,7 +15,7 @@ window.onload = function () {
                 userID: userID
             },
             success: function (data, flag) {
-                if (data.status == 200) {
+                if (data.code == 1000) {
                     $.each(data.data, function (index, value) {
                         var stat;
                         var del;
@@ -42,10 +42,12 @@ window.onload = function () {
                             + "<td>" + del + "</td>"
                             + "<td>" + value.memo + "</td>"
                             + "<td>" + value.ctime + "</td>"
-                            + "<td><a href='/usersManage.action?userId=" + value.userId + "' class='btn btn-mini btn-danger' id='ipt10'>删除</td>"
+                            + "<td><a href='/mushRoomGH/delUser/?userId=" + value.userId + "' class='btn btn-mini btn-danger' id='ipt10'>删除</td>"
                             + '</tr>';
                         $('#top_table').append(tab);
                     });
+                } else if (data.code == 2002) {
+                    alert(data.message)
                 }
                 var tab = '<tbody> <tr> <td colspan="100" align="right"> <input type="button" class="btn btn-mini btn-primary" value="添加" id="showAddUser"/> </td> </tr> <tbody>';
                 $('#top_table').append(tab);
@@ -74,19 +76,19 @@ window.onload = function () {
             var url = this.href; //获取url中"?"符后的字串
             var userId = GetRequest(url).userId;
             $.ajax({
-                url: "/mushroomGreenHouseGraduateDesign/user/deleteUsers.action",
+                url: "/mushRoomGH/delUser",
                 type: "GET",
                 dataType: "JSON",
                 async: false,
                 data: {
-                    userID: userId
+                    userId: userId
                 },
                 success: function (data, flag) {
                     // console.log(data);
-                    if (data.status == 200) {
+                    if (data.code == 1000) {
                         $("#" + userId + "").hide();
                     } else {
-                        alert("删除失败！");
+                        alert(data.message);
                     }
                 },
                 error: function (data, flag) {
@@ -138,7 +140,7 @@ window.onload = function () {
         var ipt6 = $("#ipt6").val();
         var ipt7 = $("#ipt7").val();
         $.ajax({
-            url: "/mushroomGreenHouseGraduateDesign/user/addUsers.action",
+            url: "/mushRoomGH/addUsers",
             type: "POST",
             dataType: "JSON",
             data: {
@@ -151,7 +153,7 @@ window.onload = function () {
                 memo: ipt7
             },
             success: function (data, flag) {
-                if (data.status == 200) {
+                if (data.code == 1000) {
                     $("#addUser").hide();
                     $("#showAddUser").attr('disabled', false);
                     cleanVal();
@@ -181,10 +183,10 @@ window.onload = function () {
                         + "<td>" + del + "</td>"
                         + "<td>" + value.memo + "</td>"
                         + "<td>" + value.ctime + "</td>"
-                        + "<td><a href='/test.test?userId=" + value.userId + "' class='btn btn-mini btn-danger' id='ipt10'>删除</td>"
+                        + "<td><a href='/mushRoomGH/delUser?userId=" + value.userId + "' class='btn btn-mini btn-danger' id='ipt10'>删除</td>"
                         + '</tr>';
                     $('#top_table').append(tab);
-                } else if (data.status == 400) {
+                } else if (data.code == 4004) {
                     alert(data.message);
                 }
             },

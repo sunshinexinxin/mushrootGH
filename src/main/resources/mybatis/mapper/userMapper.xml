@@ -19,7 +19,9 @@
     <select id="getUserByName" parameterType="String" resultMap="userMap">
         select user_id,user_name,user_age,user_psd,user_phone,user_add,status,del_flag,memo,ctime
         from TB_MRGH_USERS
-        WHERE user_name = #{name,jdbcType=NVARCHAR}
+        WHERE 1=1
+        and del_flag!='1'
+        and user_name = #{userName,jdbcType=NVARCHAR}
     </select>
 </mapper>
 
