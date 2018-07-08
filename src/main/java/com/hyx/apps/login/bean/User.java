@@ -1,6 +1,6 @@
 package com.hyx.apps.login.bean;
 
-import com.hyx.apps.sence.bean.Monitor;
+import com.hyx.apps.map.bean.Monitor;
 
 /**
  * @author anke

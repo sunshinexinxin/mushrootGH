@@ -1,6 +1,6 @@
 package com.hyx.apps.map.service;
 
-import com.hyx.apps.sence.bean.Monitor;
+import com.hyx.apps.map.bean.Monitor;
 
 import java.util.List;
 

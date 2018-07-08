@@ -1,6 +1,6 @@
 package com.hyx.apps.map.dao;
 
-import com.hyx.apps.sence.bean.Monitor;
+import com.hyx.apps.map.bean.Monitor;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.hyx.apps.map.service.impl;
 
 import com.hyx.apps.map.dao.MapDao;
 import com.hyx.apps.map.service.MapService;
-import com.hyx.apps.sence.bean.Monitor;
+import com.hyx.apps.map.bean.Monitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

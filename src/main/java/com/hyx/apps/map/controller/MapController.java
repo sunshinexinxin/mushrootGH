@@ -1,7 +1,7 @@
 package com.hyx.apps.map.controller;
 
 import com.hyx.apps.map.service.MapService;
-import com.hyx.apps.sence.bean.Monitor;
+import com.hyx.apps.map.bean.Monitor;
 import com.hyx.common.ResponseBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

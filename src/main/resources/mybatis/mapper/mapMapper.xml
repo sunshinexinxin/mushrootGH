@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.hyx.apps.map.dao.MapDao" >
     <!--获取用户对应的基地数据-->
-    <resultMap id="userInfoMapList" type="com.hyx.apps.sence.bean.Monitor">
+    <resultMap id="userInfoMapList" type="com.hyx.apps.map.bean.Monitor">
         <result column="mushroom_pointid" property="mushroomPointid"/>
         <result column="mushroom_name" property="mushroomName"/>
         <result column="user_id" property="userId"/>

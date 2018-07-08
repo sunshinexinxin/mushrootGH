@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.hyx.apps.sence.dao.impl.ChartsDaoImpl">
+<mapper namespace="com.hyx.apps.datareport.dao.DataReportDao">
     <!--echarts 温度图表-->
-    <resultMap id="temp_wet_MapList" type="com.hyx.apps.sence.bean.ChartsCollectionBean">
+    <resultMap id="temp_wet_MapList" type="com.hyx.apps.datareport.bean.ChartsCollectionBean">
         <result column="idno" property="idno"/>
         <result column="mushroom_pointid" property="mushroomPointid"/>
         <result column="mushroom_airtemp" property="mushroomAirtemp"/>

@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author anke
+ * @description:用户信息，登录模块
  * @date 2018/7/7
  */
 @Controller
