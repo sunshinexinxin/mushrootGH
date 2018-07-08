@@ -15,6 +15,11 @@ public class CodeConst {
      */
     public static final String CODE_OK = "1000";
 
+    /**成功，但是无数据
+     *
+     */
+    public static final String CODE_OK_NO_DATA = "1001";
+
     /**
      * 处理失败
      */
@@ -97,6 +102,7 @@ public class CodeConst {
             this.put(CODE_TOKEN_ERROR, "您没有上送正确的token");
             this.put(CODE_TOKEN_EXPIRES, "您上送的token已超时，请重新获取");
             this.put(CODE_OK, "成功");
+            this.put(CODE_OK_NO_DATA, "成功，但是无数据");
         }
     };
 
