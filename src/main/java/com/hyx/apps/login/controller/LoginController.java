@@ -31,8 +31,8 @@ public class LoginController {
     @Autowired
     private UserService service;
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "登录操作")
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation(value = "登录操作", httpMethod = "POST")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "userName", value = "用户名", dataType = "String", paramType = "query", required = true),
             @ApiImplicitParam(name = "userPwd", value = "密码", dataType = "String", paramType = "query", required = true)
