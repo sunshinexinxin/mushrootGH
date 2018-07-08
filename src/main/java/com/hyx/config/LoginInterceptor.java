@@ -3,6 +3,7 @@ package com.hyx.config;
 import com.hyx.common.CodeConst;
 import com.hyx.common.ResponseBean;
 import com.hyx.tools.JsonKit;
+import org.apache.log4j.Logger;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -19,11 +20,13 @@ import java.io.OutputStream;
  * @date 2018/5/21
  */
 public class LoginInterceptor implements HandlerInterceptor {
+    protected final Logger logger = Logger.getLogger(LoginInterceptor.class);
+
     private final static String SESSION_KEY = "userId";
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
-        System.out.println(request.getRequestURI());
+        logger.info(request.getRequestURI());
         //获取session
         HttpSession session = request.getSession();
         if (session.getAttribute(SESSION_KEY) == null) {
