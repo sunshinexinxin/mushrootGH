@@ -136,88 +136,72 @@
         </h1>
         <div class="acc">
             <div>
-                <a class="one" id="left1"><span id="span1">数据报表统计</span></a>
+                <a class="one" id="left1"><span id="span1">数据查询模块</span></a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
                         <a target="Conframe"
-                           href="/mushRoomGH/echarts_bingtu">饼图统计</a>
+                           href="/mushRoomGH/echarts_bingtu">数据报表</a>
                     </li>
                     <li>
                         <b class="tip"></b>
                         <a target="Conframe"
-                           href="/static/main/Template/echarts_duiji.jsp">统计分析</a>
+                           href="/mushRoomGH/echarts_temp_wetPage">饼图折线图</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">温度展示</a>
+                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">报表导出</a>
+                    </li>
+                    <li>
+                        <b class="tip"></b>
+                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">历史数据维护</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left2">实时数据查询</a>
+                <a class="one" id="left2">预警分析模块</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/form-collapse">空气温度</a>
+                                              href="/mushRoomGH/form-collapse">数据监测</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/form-guide.html">土壤湿度</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Maintain-del.html">光照强度</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Maintain-del.html">二氧化碳含量</a>
+                                              href="/static/main/Template/form-guide.html">实施报警</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left3">预警规则管理</a>
+                <a class="one" id="left3">行业资讯模块</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预警规则制定</a>
+                                              href="/static/main/Template/Alert.html">天气数据</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">责任人指定</a>
+                                              href="/static/main/Template/Alert.html">农产品价格行情</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
+                                              href="/static/main/Template/Alert.html">食用菌行业新闻</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left4">远程设备管理</a>
+                <a class="one" id="left4">设备管理模块</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/order.html">修改设备编号</a>
+                                              href="/static/main/Template/order.html">数据自动采集</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">修改设备名称</a>
+                                              href="/static/main/Template/formstyle.html">数据可视化</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">预留菜单</a>
+                                              href="/static/main/Template/formstyle.html">设备远程控制</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -229,19 +213,19 @@
                 <input type="hidden" id="status" value="${userBean.getStatus()}">
             </div>
             <div>
-                <a class="one" id="left5">系统后台管理</a>
+                <a class="one" id="left5">系统管理模块</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/userManagementPage">系统用户配置</a>
+                                              href="/mushRoomGH/userManagementPage">个人中心</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">修改个人信息</a>
+                                              href="/static/main/Template/formstyle.html">基地管理</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">预留菜单</a>
+                                              href="/static/main/Template/formstyle.html">日志管理</a>
                     </li>
                 </ul>
             </div>
