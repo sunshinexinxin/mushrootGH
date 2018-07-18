@@ -1,8 +1,9 @@
 package com.hyx.apps.userinfo.controller;
 
-import com.hyx.apps.map.service.MapService;
 import com.hyx.apps.map.bean.Monitor;
+import com.hyx.apps.map.service.MapService;
 import com.hyx.common.ResponseBean;
+import com.hyx.tools.SecurityUtil;
 import com.hyx.tools.StrKit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -12,10 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -41,14 +39,14 @@ public class UserInfoController {
     @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
     @ApiOperation(value = "个人中心-用户信息", response = ResponseBean.class)
     public ResponseBean userInfo() {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        String userId = request.getSession().getAttribute("userId").toString();
+        String userId = SecurityUtil.getCurrentUser().getUserId();
+        String status = SecurityUtil.getCurrentUser().getStatus();
         logger.info("从session获取userID:" + userId);
         if (StrKit.isBlank(userId)) {
             return new ResponseBean();
         }
         try {
-            List<Monitor> userInfoList = mapService.getMapDataByUserId(userId);
+            List<Monitor> userInfoList = mapService.getMapDataByUserId(userId, status);
             logger.info("userInfoList:" + userInfoList);
             return new ResponseBean(userInfoList);
         } catch (Exception e) {

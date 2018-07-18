@@ -14,11 +14,13 @@
         <result column="memo" property="memo"/>
         <result column="ctime" property="ctime"/>
     </resultMap>
-    <!--echarts 温度图表-->
+    <!--数据查询模块-饼图折线图-折线图-->
     <select id="getTempWetListById" resultMap="temp_wet_MapList">
         select * from tb_mrgh_data_acquisition
         where 1=1
-        and mushroom_pointid = #{pointId,jdbcType=NVARCHAR}
+        <if test="pointId!=null and pointId!=''">
+            and mushroom_pointid = #{pointId,jdbcType=NVARCHAR}
+        </if>
         order by ctime desc
         limit 8;
     </select>

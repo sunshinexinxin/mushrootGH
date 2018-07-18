@@ -2,6 +2,9 @@ package com.hyx.apps.login.dao;
 
 import com.hyx.apps.login.bean.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @author anke
@@ -16,6 +19,14 @@ public interface UserDao {
      * @return
      */
     User getUserByName(String userName);
+
+    /**
+     * 根据用户id，获取id和基地的映射
+     *
+     * @param userId
+     * @return
+     */
+    List<String> getUserPointidMap(@Param("userId") String userId);
 
 }
 

@@ -14,8 +14,9 @@ public interface MapService {
      * 获取用户对应的基地数据
      *
      * @param userId
+     * @param status
      * @return
      */
-    List<Monitor> getMapDataByUserId(String userId);
+    List<Monitor> getMapDataByUserId(String userId, String status);
 
 }

@@ -2,7 +2,9 @@ package com.hyx.apps.datareport.controller;
 
 import com.hyx.apps.datareport.bean.ChartsCollectionBean;
 import com.hyx.apps.datareport.service.DataReportService;
+import com.hyx.apps.login.bean.User;
 import com.hyx.common.ResponseBean;
+import com.hyx.tools.SecurityUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.log4j.Logger;
@@ -22,7 +24,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/mushRoomGH")
-@Api(description = "数据报表统计Controller")
+@Api(description = "数据查询模块Controller")
 public class DataReportController {
     protected final Logger logger = Logger.getLogger(DataReportController.class);
 
@@ -30,44 +32,46 @@ public class DataReportController {
     private DataReportService dataReportService;
 
     /**
-     * 数据报表统计-温度展示
+     * 数据查询模块-饼图折线图-折线图
      *
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/echarts_temp_wetData", method = RequestMethod.GET)
+    @RequestMapping(value = "/foldLineDiagram", method = RequestMethod.GET)
     @ApiOperation(value = "温度展示", response = ResponseBean.class)
     public ResponseBean tempWetData() {
         logger.info("数据报表统计-温度展示");
         //TODO 该方法的逻辑还有问题，js页面需要修改
-        //TODO 该出需要修改成获取值
-        List<ChartsCollectionBean> tempWetList = dataReportService.getTempWetListById("00011");
+        List<User> userPointidMap = (List<User>) SecurityUtil.getCurrentUser("userPointidMap");
+        logger.info(userPointidMap);
+        List<ChartsCollectionBean> tempWetList = dataReportService.getTempWetListById("21006");
         return new ResponseBean(tempWetList);
     }
 
 
     /**
-     * 数据报表统计-饼图展示
+     * 数据查询模块-饼图折线图-饼图
      *
      * @param request
      * @return
      */
-    @RequestMapping(value = "/echarts_bingtu", method = RequestMethod.GET)
+    @ResponseBody
+    @RequestMapping(value = "/pieChart", method = RequestMethod.GET)
     @ApiOperation(value = "饼图展示", response = String.class)
-    public String bingtu(HttpServletRequest request) {
+    public ResponseBean bingtu(HttpServletRequest request) {
         String lat = request.getParameter("lat");
         String lng = request.getParameter("lng");
-        return "sence/charts/echarts_bingtu";
+        return new ResponseBean();
     }
 
     /**
-     * 数据报表统计-温度折线图展示
+     * 数据查询模块-饼图折线图
      *
      * @return
      */
-    @RequestMapping(value = "/echarts_temp_wetPage", method = RequestMethod.GET)
+    @RequestMapping(value = "/chartsPage", method = RequestMethod.GET)
     @ApiOperation(value = "温度折线图展示", response = String.class)
-    public String tempWetPage() {
-        return "/sence/charts/echarts_temp_wet";
+    public String chartsPage() {
+        return "/sence/charts/charts";
     }
 }

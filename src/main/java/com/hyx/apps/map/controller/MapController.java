@@ -1,11 +1,11 @@
 package com.hyx.apps.map.controller;
 
-import com.hyx.apps.map.service.MapService;
 import com.hyx.apps.map.bean.Monitor;
+import com.hyx.apps.map.service.MapService;
 import com.hyx.common.ResponseBean;
+import com.hyx.tools.SecurityUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -40,9 +40,11 @@ public class MapController {
     @ResponseBody
     @RequestMapping(value = "/mushRoomMapData", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "获取地图数据", response = ResponseBean.class)
-    public ResponseBean mushRoomMapData(@ApiParam(required = true) String userId) {
+    public ResponseBean mushRoomMapData() {
         logger.info("获取地图数据");
-        List<Monitor> mushRoomList = mapService.getMapDataByUserId("22010001"); //TODO 该出需要修改成获取值
+        String userId = SecurityUtil.getCurrentUser().getUserId();
+        String status = SecurityUtil.getCurrentUser().getStatus();
+        List<Monitor> mushRoomList = mapService.getMapDataByUserId(userId,status);
         List resuList = new ArrayList();
         for (int i = 0; i < mushRoomList.size(); i++) {
             List resuLists = new ArrayList();

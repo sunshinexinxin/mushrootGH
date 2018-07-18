@@ -23,6 +23,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     protected final Logger logger = Logger.getLogger(LoginInterceptor.class);
 
     private final static String SESSION_KEY = "userId";
+    private final static String SESSION_USER = "userPointidMap";
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
@@ -39,6 +40,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return false;
         } else {
             session.setAttribute(SESSION_KEY, session.getAttribute(SESSION_KEY));
+            session.setAttribute(SESSION_USER, session.getAttribute(SESSION_USER));
             return true;
         }
     }

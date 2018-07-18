@@ -6,6 +6,8 @@ import com.hyx.apps.login.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author anke
  * @date 2018/7/7
@@ -25,5 +27,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserByName(String userName) {
         return userdao.getUserByName(userName);
+    }
+
+
+    /**
+     * 根据用户id，获取id和基地的映射
+     *
+     * @param userId
+     * @return
+     */
+    @Override
+    public List<String> getUserPointidMap(String userId) {
+        return userdao.getUserPointidMap(userId);
     }
 }

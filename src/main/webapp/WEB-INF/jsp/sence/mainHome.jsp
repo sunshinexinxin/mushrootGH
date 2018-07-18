@@ -146,7 +146,7 @@
                     <li>
                         <b class="tip"></b>
                         <a target="Conframe"
-                           href="/mushRoomGH/echarts_temp_wetPage">饼图折线图</a>
+                           href="/mushRoomGH/chartsPage">饼图折线图</a>
                     </li>
                     <li>
                         <b class="tip"></b>
@@ -255,7 +255,7 @@
     <!--底部结束-->
 </div>
 
-<script type="text/javascript" src="/static/js/sence/charts/mainHome.js"></script>
+<script type="text/javascript" src="/static/js/sence/mainHome.js"></script>
 
 </body>
 </html>

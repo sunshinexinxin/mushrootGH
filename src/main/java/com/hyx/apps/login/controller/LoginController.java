@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @author anke
@@ -52,6 +53,8 @@ public class LoginController {
                             request.getSession().setAttribute("userName", user.getUserName());
                             request.getSession().setAttribute("userId", user.getUserId());
                             request.getSession().setAttribute("userBean", user);
+                            List<String> userPointidMap = service.getUserPointidMap(user.getUserId());
+                            request.getSession().setAttribute("userPointidMap", userPointidMap);
                             logger.info(user.getUserName() + " 登录成功！");
                             return "sence/mainHome";
                         } catch (Exception e) {

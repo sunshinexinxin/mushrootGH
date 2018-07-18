@@ -12,7 +12,7 @@ public interface DataReportService {
 
 
     /**
-     * 数据报表统计-温度展示
+     * 数据查询模块-饼图折线图-折线图
      *
      * @param pointId
      * @return
