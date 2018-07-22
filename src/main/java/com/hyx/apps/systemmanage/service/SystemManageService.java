@@ -1,8 +1,7 @@
-package com.hyx.apps.usermanagement.dao;
+package com.hyx.apps.systemmanage.service;
 
 
 import com.hyx.apps.login.bean.User;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -11,9 +10,8 @@ import java.util.Map;
  * @author anke
  * @date 2017/11/22
  */
+public interface SystemManageService {
 
-@Mapper
-public interface UserManagementDao {
     /**
      * 系统后台管理-系统用户配置
      * 获取系统用户列表
@@ -23,7 +21,6 @@ public interface UserManagementDao {
      */
     List<User> getUsersList(Map<String, Object> params);
 
-
     /**
      * 系统后台管理-系统用户配置
      * 添加系统用户
@@ -31,14 +28,15 @@ public interface UserManagementDao {
      * @param params
      * @return
      */
-    Integer addUsers(Map params);
+    int addUsers(Map<String, Object> params);
 
     /**
      * 系统后台管理-系统用户配置
      * 删除系统用户
      *
-     * @param userId
+     * @param userID
      * @return
      */
-    Integer delUser(String userId);
+    Integer delUser(String userID);
+
 }

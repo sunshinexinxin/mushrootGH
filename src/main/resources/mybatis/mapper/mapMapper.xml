@@ -22,9 +22,7 @@
         mm.mushroom_name as mushroomName,
         mm.user_id as userId,
         mm.mushroom_desc ,
-        case when mm.mushroom_status = '0' then '非监控'
-        when mm.mushroom_status = '1' then '监控中'
-        end as mushroom_status,
+        mm.mushroom_status,
         mm.mushroom_long ,
         mm.mushroom_lat ,
         case when mm.del_flag = '0' then '正在使用'
@@ -34,9 +32,57 @@
         mm.ctime as mushroom_ctime
         from tb_mrgh_monitor mm
         where 1=1
-        <if test="userId!=null and userId!='' and status!=2">
+        <if test="userId!=null and userId!='' and role!=2">
             AND user_id=#{userId,jdbcType=NVARCHAR}
         </if>
+        <if test="mushroomStatus!=null and mushroomStatus!=''">
+            AND mushroom_status=#{mushroomStatus,jdbcType=NVARCHAR}
+        </if>
     </select>
+
+
+    <!--删除系统用户 -->
+    <update id="updateMonitorStatus" parameterType="com.hyx.apps.map.bean.Monitor">
+        UPDATE tb_mrgh_monitor
+        <trim prefix="set" suffixOverrides=",">
+            <if test="mushroomPointid!=null">
+                mushroom_pointid=#{mushroomPointid},
+            </if>
+            <if test="mushroomName!=null">
+                mushroom_name=#{mushroomName},
+            </if>
+            <if test="userId!=null">
+                user_id=#{userId},
+            </if>
+            <if test="mushroomDesc!=null">
+                mushroom_desc=#{mushroomDesc},
+            </if>
+            <if test="mushroomStatus!=null">
+                mushroom_status=#{mushroomStatus},
+            </if>
+            <if test="mushroomLong!=null">
+                mushroom_long=#{mushroomLong},
+            </if>
+            <if test="mushroomLat!=null">
+                mushroom_lat=#{mushroomLat},
+            </if>
+            <if test="mushroomLength!=null">
+                mushroom_length=#{mushroomLength},
+            </if>
+            <if test="mushroomWidth!=null">
+                mushroom_width=#{mushroomWidth},
+            </if>
+            <if test="mushroomArea!=null">
+                mushroom_area=#{mushroomArea},
+            </if>
+            <if test="delFlag!=null">
+                del_flag=#{delFlag},
+            </if>
+            <if test="memo!=null">
+                memo=#{memo},
+            </if>
+        </trim>
+        WHERE mushroom_pointid=#{mushroomPointid}
+    </update>
 
 </mapper>

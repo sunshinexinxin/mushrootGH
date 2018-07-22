@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @description:
@@ -22,11 +23,23 @@ public class MapServiceImpl implements MapService {
      * 获取用户对应的基地数据
      *
      * @param userId
-     * @param status
+     * @param role
      * @return
      */
     @Override
-    public List<Monitor> getMapDataByUserId(String userId, String status) {
-        return mapDao.getMapDataByUserId(userId, status);
+    public List<Monitor> getMapDataByUserId(Map<String, String> params) {
+        return mapDao.getMapDataByUserId(params);
+    }
+
+
+    /**
+     * 系统管理模块-基地管理-监控状态修改
+     *
+     * @param params
+     * @return
+     */
+    @Override
+    public Integer updateMonitorStatus(Map<String, String> params) {
+        return mapDao.updateMonitorStatus(params);
     }
 }

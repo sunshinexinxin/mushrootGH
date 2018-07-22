@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.hyx.apps.usermanagement.dao.UserManagementDao">
+<mapper namespace="com.hyx.apps.systemmanage.dao.SystemManageDao">
     <!--系统后台管理模块-添加系统用户-->
     <resultMap id="usersList" type="com.hyx.apps.login.bean.User">
         <result column="user_id" property="userId"/>
@@ -9,7 +9,7 @@
         <result column="user_psd" property="userPsd"/>
         <result column="user_phone" property="userPhone"/>
         <result column="user_add" property="userAdd"/>
-        <result column="status" property="status"/>
+        <result column="role" property="role"/>
         <result column="del_flag" property="delFlag"/>
         <result column="memo" property="memo"/>
         <result column="ctime" property="ctime"/>
@@ -24,7 +24,7 @@
         user_psd,
         user_phone,
         user_add,
-        status,
+        role,
         del_flag,
         memo,
         ctime
@@ -34,8 +34,8 @@
         <if test="userId != null">
             and user_id = #{userId,jdbcType=NVARCHAR}
         </if>
-        <if test="status != null">
-            and status &lt;= #{status,jdbcType=INTEGER}
+        <if test="role != null">
+            and role &lt;= #{role,jdbcType=INTEGER}
         </if>
     </select>
 
@@ -63,8 +63,8 @@
             <if test="userAdd != null">
                 user_add,
             </if>
-            <if test="status != null">
-                status,
+            <if test="role != null">
+                role,
             </if>
             <if test="true">
                 del_flag,
@@ -92,8 +92,8 @@
             <if test="userAdd != null">
                 #{userAdd,jdbcType=VARCHAR},
             </if>
-            <if test="status != null">
-                #{status,jdbcType=VARCHAR},
+            <if test="role != null">
+                #{role,jdbcType=VARCHAR},
             </if>
             <if test="del_flag != null">
                 #{delFlag,jdbcType=VARCHAR},

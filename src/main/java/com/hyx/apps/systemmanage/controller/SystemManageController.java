@@ -1,12 +1,15 @@
-package com.hyx.apps.usermanagement.controller;
+package com.hyx.apps.systemmanage.controller;
 
 import com.hyx.apps.login.bean.User;
 import com.hyx.apps.login.service.UserService;
-import com.hyx.apps.usermanagement.service.UserManagementService;
+import com.hyx.apps.map.bean.Monitor;
+import com.hyx.apps.map.service.MapService;
+import com.hyx.apps.systemmanage.service.SystemManageService;
 import com.hyx.common.CodeConst;
 import com.hyx.common.ResponseBean;
 import com.hyx.tools.CommonUtil;
 import com.hyx.tools.Md5Utils;
+import com.hyx.tools.SecurityUtil;
 import com.hyx.tools.StrKit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -29,29 +32,31 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "/mushRoomGH")
-@Api(description = "系统后台管理")
-public class UserManagementCrontroller {
-    protected final Logger logger = Logger.getLogger(UserManagementCrontroller.class);
+@Api(value = "SystemManageController", description = "系统管理模块控制层")
+public class SystemManageController {
+    protected final Logger logger = Logger.getLogger(SystemManageController.class);
 
 
     @Autowired
-    private UserManagementService userManagementService;
+    private SystemManageService systemManageService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private MapService mapService;
 
     @ResponseBody
     @RequestMapping(value = "getUsers", method = RequestMethod.GET)
     @ApiOperation(value = "系统用户配置", response = ResponseBean.class)
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "status", value = "用户状态", dataType = "String", paramType = "query", required = true),
+            @ApiImplicitParam(name = "role", value = "用户状态", dataType = "String", paramType = "query", required = true),
     })
-    public ResponseBean getUsers(String status) {
-        if (StrKit.isBlank(status)) {
+    public ResponseBean getUsers(String role) {
+        if (StrKit.isBlank(role)) {
             return new ResponseBean(CodeConst.CODE_ERROR_PARAMETER_EMPTY, CodeConst.msgMap.get(CodeConst.CODE_ERROR_PARAMETER_EMPTY));
         }
         Map<String, Object> params = new HashMap<>(16);
-        params.put("status", status);
-        List<User> usersList = userManagementService.getUsersList(params);
+        params.put("role", role);
+        List<User> usersList = systemManageService.getUsersList(params);
         if (usersList == null) {
             return new ResponseBean(CodeConst.CODE_OK_NO_DATA, CodeConst.msgMap.get(CodeConst.CODE_OK_NO_DATA));
         }
@@ -67,10 +72,10 @@ public class UserManagementCrontroller {
             @ApiImplicitParam(name = "userAge", value = "年龄", dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "userPhone", value = "联系方式", dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "userAdd", value = "地址", dataType = "String", paramType = "query"),
-            @ApiImplicitParam(name = "status", value = "用户状态", dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "role", value = "用户角色", dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "memo", value = "备注", dataType = "String", paramType = "query"),
     })
-    public ResponseBean addUsers(String userName, String userPsd, String userAge, String userPhone, String userAdd, String status, String memo) {
+    public ResponseBean addUsers(String userName, String userPsd, String userAge, String userPhone, String userAdd, String role, String memo) {
         if (StrKit.isBlank(userName)) {
             return new ResponseBean(CodeConst.CODE_ERROR_PARAMETER_EMPTY, CodeConst.msgMap.get(CodeConst.CODE_ERROR_PARAMETER_EMPTY));
         }
@@ -80,11 +85,11 @@ public class UserManagementCrontroller {
         params.put("userAge", userAge);
         params.put("userPhone", userPhone);
         params.put("userAdd", userAdd);
-        params.put("status", status);
+        params.put("role", role);
         params.put("memo", memo);
         params.put("ctime", CommonUtil.getLocalSysTime2());
         logger.info(params);
-        int integer = userManagementService.addUsers(params);
+        int integer = systemManageService.addUsers(params);
         if (integer == Integer.parseInt(CodeConst.CODE_HAD_USER_OR_CUSTOMER)) {
             return new ResponseBean(CodeConst.CODE_HAD_USER_OR_CUSTOMER, CodeConst.msgMap.get(CodeConst.CODE_HAD_USER_OR_CUSTOMER));
         } else if (integer == 1) {
@@ -104,21 +109,100 @@ public class UserManagementCrontroller {
         if (StrKit.isBlank(userId)) {
             return new ResponseBean(CodeConst.CODE_ERROR_PARAMETER_EMPTY, CodeConst.msgMap.get(CodeConst.CODE_ERROR_PARAMETER_EMPTY));
         }
-        Integer integer = userManagementService.delUser(userId);
+        Integer integer = systemManageService.delUser(userId);
         if (integer == null) {
             return new ResponseBean(CodeConst.CODE_NO_USER_OR_CUSTOMER, CodeConst.msgMap.get(CodeConst.CODE_NO_USER_OR_CUSTOMER));
         }
         return new ResponseBean();
     }
 
-
     /**
-     * 系统后台管理-系统用户配置
+     * 系统管理模块-基地管理
      *
      * @return
      */
-    @RequestMapping(value = "/userManagementPage", method = RequestMethod.GET)
-    public String addUser() {
-        return "/userManagement/userManagement";
+    @ResponseBody
+    @RequestMapping(value = "/baseManage", method = RequestMethod.GET)
+    @ApiOperation(value = "系统管理模块-基地管理", response = ResponseBean.class)
+    public ResponseBean baseManage() {
+        logger.info("系统管理模块-基地管理");
+        //获取用户id及用户角色
+        String userId = SecurityUtil.getCurrentUser().getUserId();
+        String role = SecurityUtil.getCurrentUser().getRole();
+        if (StrKit.isBlank(userId)) {
+            return new ResponseBean();
+        }
+        Map params = new HashMap(16);
+        params.put("userId", userId);
+        params.put("role", role);
+        try {
+            List<Monitor> userInfoList = mapService.getMapDataByUserId(params);
+            logger.info("userInfoList:" + userInfoList);
+            return new ResponseBean(userInfoList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseBean();
+    }
+
+    /**
+     * 系统管理模块-基地管理-监控状态修改
+     *
+     * @return
+     */
+    @RequestMapping(value = "/updateMonitorStatus", method = RequestMethod.GET)
+    @ApiOperation(value = "系统管理模块-基地管理-监控状态修改", response = ResponseBean.class)
+    public String updateMonitorStatus(String pointid, String status) {
+        logger.info("系统管理模块-基地管理-监控状态修改");
+        if (StrKit.isBlank(pointid) || StrKit.isBlank(status)) {
+            return "/systemManage/baseManage";
+        }
+        Map params = new HashMap(16);
+        params.put("mushroomPointid", pointid);
+        if ("0".equals(status)) {
+            params.put("mushroomStatus", "1");
+        } else if ("1".equals(status)) {
+            params.put("mushroomStatus", "0");
+        }
+        try {
+            Integer cnt = mapService.updateMonitorStatus(params);
+            if (cnt == 1) {
+                return "/systemManage/baseManage";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "/systemManage/baseManage";
+    }
+
+
+    /**
+     * 系统管理模块-用户管理
+     *
+     * @return
+     */
+    @RequestMapping(value = "/userManagePage", method = RequestMethod.GET)
+    public String userManagePage() {
+        return "/systemManage/userManage";
+    }
+
+    /**
+     * 系统管理模块-基地管理
+     *
+     * @return
+     */
+    @RequestMapping(value = "/baseManagePage", method = RequestMethod.GET)
+    public String baseManagePage() {
+        return "/systemManage/baseManage";
+    }
+
+    /**
+     * 系统管理模块-日志管理
+     *
+     * @return
+     */
+    @RequestMapping(value = "/logManagePage", method = RequestMethod.GET)
+    public String logManagePage() {
+        return "/systemManage/logManage";
     }
 }

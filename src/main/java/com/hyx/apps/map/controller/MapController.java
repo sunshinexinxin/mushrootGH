@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @description: 地图接口
@@ -43,8 +45,12 @@ public class MapController {
     public ResponseBean mushRoomMapData() {
         logger.info("获取地图数据");
         String userId = SecurityUtil.getCurrentUser().getUserId();
-        String status = SecurityUtil.getCurrentUser().getStatus();
-        List<Monitor> mushRoomList = mapService.getMapDataByUserId(userId,status);
+        String role = SecurityUtil.getCurrentUser().getRole();
+        Map params = new HashMap(16);
+        params.put("userId", userId);
+        params.put("role", role);
+        params.put("mushroomStatus", "1");
+        List<Monitor> mushRoomList = mapService.getMapDataByUserId(params);
         List resuList = new ArrayList();
         for (int i = 0; i < mushRoomList.size(); i++) {
             List resuLists = new ArrayList();

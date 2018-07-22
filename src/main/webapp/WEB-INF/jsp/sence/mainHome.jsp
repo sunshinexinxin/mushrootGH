@@ -146,7 +146,7 @@
                     <li>
                         <b class="tip"></b>
                         <a target="Conframe"
-                           href="/mushRoomGH/chartsPage">饼图折线图</a>
+                           href="/mushRoomGH/chartsPage">数据可视化</a>
                     </li>
                     <li>
                         <b class="tip"></b>
@@ -189,15 +189,11 @@
                 </ul>
             </div>
             <div>
-                <a class="one" id="left4">设备管理模块</a>
+                <a class="one" id="left4">基地管理模块</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
                                               href="/static/main/Template/order.html">数据自动采集</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">数据可视化</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -210,22 +206,22 @@
                 </ul>
             </div>
             <div>
-                <input type="hidden" id="status" value="${userBean.getStatus()}">
+                <input type="hidden" id="role" value="${userBean.getRole()}">
             </div>
             <div>
                 <a class="one" id="left5">系统管理模块</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/userManagementPage">个人中心</a>
+                                              href="/mushRoomGH/userManagePage">用户管理</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">基地管理</a>
+                                              href="/mushRoomGH/baseManagePage">基地管理</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">日志管理</a>
+                                              href="/mushRoomGH/logManagePage">日志管理</a>
                     </li>
                 </ul>
             </div>

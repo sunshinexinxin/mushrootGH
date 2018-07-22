@@ -1,4 +1,4 @@
-package com.hyx.apps.usermanagement.bean;
+package com.hyx.apps.systemmanage.bean;
 
 /**
  * @author anke

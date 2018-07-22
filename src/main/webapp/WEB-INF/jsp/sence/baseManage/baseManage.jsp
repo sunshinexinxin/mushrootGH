@@ -49,19 +49,19 @@
                 <div class="span8">
                     <label>岗位：<span id="a">ddd</span></label>
                     <script type="text/javascript">
-                        if (${userBean.getRole()}==0
+                        if (${userBean.getStatus()}==0
                         )
                         {
                             document.getElementById("a").innerHTML = "开发测试岗";
                         }
                         else
-                        if (${userBean.getRole()}==1
+                        if (${userBean.getStatus()}==1
                         )
                         {
                             document.getElementById("a").innerHTML = "普通用户";
                         }
                         else
-                        if (${userBean.getRole()}==2
+                        if (${userBean.getStatus()}==2
                         )
                         {
                             document.getElementById("a").innerHTML = "管理员";
@@ -76,6 +76,30 @@
                 <div class="span8">
                     <label>入职时间：${userBean.getCtime()}
                 </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h3>
+                大棚信息
+            </h3>
+            <div>
+                <table class="table table-bordered table-hover" id="table">
+                    <thead>
+                    <tr bgcolor=#C1CDCD>
+                        <th>大棚编号</th>
+                        <th>中文名称</th>
+                        <th>负责人ID</th>
+                        <th>描述信息</th>
+                        <th>监控状态</th>
+                        <th>大棚经度</th>
+                        <th>大棚纬度</th>
+                        <th>大棚状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                </table>
             </div>
         </div>
 

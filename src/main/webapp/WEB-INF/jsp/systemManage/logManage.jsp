@@ -92,7 +92,7 @@
 </div>
 
 
-<script type="text/javascript" src="/static/js/userManagement/userManagement.js"></script>
+<script type="text/javascript" src="/static/js/systemManage/userManage.js"></script>
 </body>
 
 

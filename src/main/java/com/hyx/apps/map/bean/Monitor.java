@@ -2,6 +2,7 @@ package com.hyx.apps.map.bean;
 
 /**
  * 获取用户对应的基地数据
+ *
  * @author anke
  * @date 2017/4/22
  */

@@ -4,14 +4,14 @@
 window.onload = function () {
 
     $(document).ready(function () {
-        var status = $("#status").val();
+        var role = $("#role").val();
         var userID = $("#userID").val();
         $.ajax({
             url: "/mushRoomGH/getUsers",
             type: "GET",
             dataType: "JSON",
             data: {
-                status: status,
+                role: role,
                 userID: userID
             },
             success: function (data, flag) {
@@ -19,11 +19,11 @@ window.onload = function () {
                     $.each(data.data, function (index, value) {
                         var stat;
                         var del;
-                        if (value.status == 0) {
+                        if (value.role == 0) {
                             stat = '开发测试岗';
-                        } else if (value.status == 1) {
+                        } else if (value.role == 1) {
                             stat = '普通用户';
-                        } else if (value.status == 2) {
+                        } else if (value.role == 2) {
                             stat = '管理员';
                         }
                         if (value.delFlag == 0) {
@@ -149,7 +149,7 @@ window.onload = function () {
                 userAge: ipt3,
                 userPhone: ipt4,
                 userAdd: ipt5,
-                status: ipt6,
+                role: ipt6,
                 memo: ipt7
             },
             success: function (data, flag) {
@@ -160,11 +160,11 @@ window.onload = function () {
                     var value = data.data;
                     var stat;
                     var del;
-                    if (value.status == 0) {
+                    if (value.role == 0) {
                         stat = '开发测试岗';
-                    } else if (value.status == 1) {
+                    } else if (value.role == 1) {
                         stat = '普通用户';
-                    } else if (value.status == 2) {
+                    } else if (value.role == 2) {
                         stat = '管理员';
                     }
                     if (value.delFlag == 0) {

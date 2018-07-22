@@ -34,7 +34,7 @@ public class User {
     /**
      * 用户身份标识.0:开发测试;1:普通用户;2:管理员
      */
-    private String status;
+    private String role;
     /**
      * 删除标识.初始为0;删除为1.
      */
@@ -56,7 +56,6 @@ public class User {
      * 统计
      */
     private Monitor coun;
-
 
     public String getUserId() {
         return userId;
@@ -106,12 +105,12 @@ public class User {
         this.userAdd = userAdd;
     }
 
-    public String getStatus() {
-        return status;
+    public String getRole() {
+        return role;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getDelFlag() {
@@ -163,7 +162,7 @@ public class User {
                 ", userPsd='" + userPsd + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userAdd='" + userAdd + '\'' +
-                ", status='" + status + '\'' +
+                ", role='" + role + '\'' +
                 ", delFlag='" + delFlag + '\'' +
                 ", memo='" + memo + '\'' +
                 ", ctime='" + ctime + '\'' +
