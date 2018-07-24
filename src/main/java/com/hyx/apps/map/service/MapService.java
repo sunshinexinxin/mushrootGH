@@ -28,4 +28,12 @@ public interface MapService {
      */
     Integer updateMonitorStatus(Map<String, String> params);
 
+    /**
+     * 系统管理模块-基地管理-用户管理的基地
+     *
+     * @param params
+     * @return
+     */
+    List<Monitor> usersMushroom(Map<String, String> params);
+
 }

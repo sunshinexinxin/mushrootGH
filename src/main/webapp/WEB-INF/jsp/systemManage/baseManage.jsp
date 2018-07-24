@@ -23,9 +23,12 @@
     基地管理
 </div>
 <div class="detail-section">
+
     <h2>
-        基地信息<br/>
+        基地信息
+        <br/>
     </h2>
+
     <div>
         <table class="table table-bordered table-hover" id="table">
             <thead>

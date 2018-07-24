@@ -22,8 +22,7 @@ public class MapServiceImpl implements MapService {
     /**
      * 获取用户对应的基地数据
      *
-     * @param userId
-     * @param role
+     * @param params
      * @return
      */
     @Override
@@ -41,5 +40,16 @@ public class MapServiceImpl implements MapService {
     @Override
     public Integer updateMonitorStatus(Map<String, String> params) {
         return mapDao.updateMonitorStatus(params);
+    }
+
+    /**
+     * 系统管理模块-基地管理-用户管理的基地
+     *
+     * @param params
+     * @return
+     */
+    @Override
+    public List<Monitor> usersMushroom(Map<String, String> params) {
+        return mapDao.getMapDataByUserId(params);
     }
 }

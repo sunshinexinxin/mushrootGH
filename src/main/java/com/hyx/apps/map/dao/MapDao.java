@@ -12,6 +12,7 @@ import java.util.Map;
  */
 @Mapper
 public interface MapDao {
+
     /**
      * 获取用户对应的基地数据
      *
@@ -27,6 +28,4 @@ public interface MapDao {
      * @return
      */
     Integer updateMonitorStatus(Map<String, String> params);
-
-
 }

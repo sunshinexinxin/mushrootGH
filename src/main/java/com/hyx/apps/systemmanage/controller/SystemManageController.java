@@ -150,12 +150,13 @@ public class SystemManageController {
      *
      * @return
      */
+    @ResponseBody
     @RequestMapping(value = "/updateMonitorStatus", method = RequestMethod.GET)
     @ApiOperation(value = "系统管理模块-基地管理-监控状态修改", response = ResponseBean.class)
-    public String updateMonitorStatus(String pointid, String status) {
+    public ResponseBean updateMonitorStatus(String pointid, String status) {
         logger.info("系统管理模块-基地管理-监控状态修改");
         if (StrKit.isBlank(pointid) || StrKit.isBlank(status)) {
-            return "/systemManage/baseManage";
+            return new ResponseBean();
         }
         Map params = new HashMap(16);
         params.put("mushroomPointid", pointid);
@@ -167,12 +168,35 @@ public class SystemManageController {
         try {
             Integer cnt = mapService.updateMonitorStatus(params);
             if (cnt == 1) {
-                return "/systemManage/baseManage";
+                return new ResponseBean();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "/systemManage/baseManage";
+        return new ResponseBean();
+    }
+
+    /**
+     * 系统管理模块-基地管理-用户管理的基地
+     *
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/usersMushroom", method = RequestMethod.GET)
+    @ApiOperation(value = "系统管理模块-基地管理-用户管理的基地", response = ResponseBean.class)
+    public ResponseBean usersMushroom(String userId) {
+        logger.info("系统管理模块-基地管理-用户管理的基地");
+        if (StrKit.isBlank(userId)) {
+            return new ResponseBean();
+        }
+        Map params = new HashMap(16);
+        params.put("userId", userId);
+        params.put("isPerson", "1");
+        List list = mapService.usersMushroom(params);
+        if (list.size() != 0) {
+            return new ResponseBean(list);
+        }
+        return new ResponseBean();
     }
 
 

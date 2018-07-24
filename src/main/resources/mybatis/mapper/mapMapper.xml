@@ -32,8 +32,11 @@
         mm.ctime as mushroom_ctime
         from tb_mrgh_monitor mm
         where 1=1
-        <if test="userId!=null and userId!='' and role!=2">
+        <if test="userId!=null and userId!='' and role!=2 and isPerson!=1">
             AND user_id=#{userId,jdbcType=NVARCHAR}
+        </if>
+        <if test="userId!=null and userId!='' and role!=2 and isPerson==1">
+            AND USER_ID=#{userId,jdbcType=NVARCHAR}
         </if>
         <if test="mushroomStatus!=null and mushroomStatus!=''">
             AND mushroom_status=#{mushroomStatus,jdbcType=NVARCHAR}
