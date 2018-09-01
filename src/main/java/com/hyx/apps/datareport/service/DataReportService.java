@@ -3,6 +3,7 @@ package com.hyx.apps.datareport.service;
 import com.hyx.apps.datareport.bean.ChartsCollectionBean;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author anke
@@ -18,4 +19,13 @@ public interface DataReportService {
      * @return
      */
     List<ChartsCollectionBean> getTempWetListById(String pointId);
+
+
+    /**
+     * 数据查询模块-数据报表
+     *
+     * @param paramMap
+     * @return
+     */
+    List<ChartsCollectionBean> dataReport(Map paramMap);
 }

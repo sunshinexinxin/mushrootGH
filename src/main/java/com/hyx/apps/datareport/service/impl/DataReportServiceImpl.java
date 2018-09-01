@@ -1,12 +1,13 @@
 package com.hyx.apps.datareport.service.impl;
 
+import com.hyx.apps.datareport.bean.ChartsCollectionBean;
 import com.hyx.apps.datareport.dao.DataReportDao;
 import com.hyx.apps.datareport.service.DataReportService;
-import com.hyx.apps.datareport.bean.ChartsCollectionBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @description:
@@ -27,5 +28,16 @@ public class DataReportServiceImpl implements DataReportService {
     @Override
     public List<ChartsCollectionBean> getTempWetListById(String pointId) {
         return dataReportDao.getTempWetListById(pointId);
+    }
+
+    /**
+     * 数据查询模块-数据报表
+     *
+     * @param paramMap
+     * @return
+     */
+    @Override
+    public List<ChartsCollectionBean> dataReport(Map paramMap) {
+        return dataReportDao.dataReport(paramMap);
     }
 }

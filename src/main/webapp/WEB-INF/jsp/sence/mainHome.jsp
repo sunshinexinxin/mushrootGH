@@ -52,16 +52,13 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <a target="Conframe"
-                               href="/static/main/Template/find-order.html">预留菜单</a>
+                            <a target="Conframe" href="/static/main/Template/find-order.html">预留菜单</a>
                         </li>
                         <li>
-                            <a target="Conframe"
-                               href="/static/main/Template/find-1.html">预留菜单</a>
+                            <a target="Conframe" href="/static/main/Template/find-1.html">预留菜单</a>
                         </li>
                         <li>
-                            <a target="Conframe"
-                               href="/static/main/Template/find-2.html">预留菜单</a>
+                            <a target="Conframe" href="/static/main/Template/find-2.html">预留菜单</a>
                         </li>
                     </ul>
                 </li>
@@ -70,12 +67,10 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
+                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushRoomGH/seeHistorImages">历史视频数据</a>
+                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/seeHistorImages">历史视频数据</a>
                         </li>
                     </ul>
                 </li>
@@ -84,28 +79,23 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/TemplatmushroomGreenHouseGraduateDesignaster-slave.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/TemplatmushroomGreenHouseGraduateDesignaster-slave.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-collapse.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-collapse.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-tabs.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-tabs.html">预留菜单</a>
                         </li>
                         <li>
                             <b class="tip"></b><a target="Conframe"
                                                   href="/static/main/Template/form-tree.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-guide.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-guide.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-tabs-list.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-tabs-list.html">预留菜单</a>
                         </li>
                     </ul>
                 </li>
@@ -114,28 +104,23 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
                             <b class="tip"></b><a target="Conframe"
                                                   href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                     </ul>
                 </li>
@@ -160,13 +145,11 @@
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe"
-                           href="/mushRoomGH/echarts_bingtu">数据报表</a>
+                        <a target="Conframe" href="/mushRoomGH/dataReportPage">数据报表</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe"
-                           href="/mushRoomGH/chartsPage">数据可视化</a>
+                        <a target="Conframe" href="/mushRoomGH/chartsPage">数据可视化</a>
                     </li>
                     <li>
                         <b class="tip"></b>
@@ -182,12 +165,10 @@
                 <a class="one" id="left2">预警分析</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/form-collapse">数据监测</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/dataMonitor/dataMonitor.html">数据监测</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/form-guide.html">实施报警</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-guide.html">实施报警</a>
                     </li>
                 </ul>
             </div>
@@ -195,8 +176,7 @@
                 <a class="one" id="left3">行业资讯</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/mushRootNews/mrhistory.html">食用菌文化</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mrhistory.html">食用菌文化</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mushRooMtech.html">食用菌培植技术</a>
@@ -212,16 +192,13 @@
                 <a class="one" id="left4">基地管理</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/order.html">数据自动采集</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/order.html">数据自动采集</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">设备远程控制</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">设备远程控制</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">预留菜单</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">预留菜单</a>
                     </li>
                 </ul>
             </div>
@@ -232,12 +209,10 @@
                 <a class="one" id="left5">系统管理</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/userManagePage">用户管理</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/userManagePage">用户管理</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/baseManagePage">基地管理</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/baseManagePage">基地管理</a>
                     </li>
                     <%--<li>--%>
                         <%--<b class="tip"></b><a target="Conframe"--%>
