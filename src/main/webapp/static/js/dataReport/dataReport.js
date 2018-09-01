@@ -8,6 +8,8 @@ window.onload = function () {
         var pointId = $("#pointId").val();
         var beginDate = $("#beginDate").val();
         var endDate = $("#endDate").val();
+        // 清空表格
+        $("#top_table  tr:not(:first)").empty("");
         $.ajax({
             url: "/mushRoomGH/dataReport",
             type: "GET",
@@ -18,7 +20,7 @@ window.onload = function () {
                 endDate: endDate
             },
             success: function (data, flag) {
-                if (data.code == 1000) {
+                if (data.code == 1000 && data.data.length > 0) {
                     var id = 1;
                     $.each(data.data, function (index, value) {
                         var tab =
@@ -37,6 +39,8 @@ window.onload = function () {
                         $('#top_table').append(tab);
                         id++;
                     });
+                } else if (data.data.length === 0) {
+                    var tab = '<tr align="center"><td>查询数据为空</td></tr>';
                 } else if (data.code == 2002) {
                     alert(data.message)
                 }
