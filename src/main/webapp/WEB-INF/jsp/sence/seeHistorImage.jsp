@@ -17,4 +17,35 @@
 <script type="text/javascript" src="/static/userInfo/js/bui-min.js"></script>
 <script type="text/javascript" src="/static/userInfo/js/config-min.js"></script>
 <script type="text/javascript" src="/static/js/sence/seeHistorImages.js"></script>
+
+
+<div class="con2 clearfix wrap">
+    <div class="con2-top">
+        <div id='img'>
+            <img id='img1' width="640" height="480" src=""/>
+        </div>
+        <%--<ul class="clearfix">--%>
+            <%--<li>--%>
+                <%--<a href="#">--%>
+                    <%--<div><img alt="" src="images/tyellow.png"/></div>--%>
+                <%--</a>--%>
+                <%--<p>1</p>--%>
+            <%--</li>--%>
+            <%--<li class="cen">--%>
+                <%--<a href="###">--%>
+                    <%--<div><img alt="" src="images/torange.png"/></div>--%>
+                <%--</a>--%>
+                <%--<p>2</p>--%>
+            <%--</li>--%>
+            <%--<li>--%>
+                <%--<a href="###">--%>
+                    <%--<div><img alt="" src="images/tgreen.png"/></div>--%>
+                <%--</a>--%>
+                <%--<p>3</p>--%>
+            <%--</li>--%>
+        <%--</ul>--%>
+    </div>
+</div>
+
+
 </html>

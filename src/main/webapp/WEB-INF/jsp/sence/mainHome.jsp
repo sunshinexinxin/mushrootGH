@@ -70,7 +70,7 @@
                             <b class="tip"></b><a target="Conframe" href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/seeHistorImages">历史视频数据</a>
+                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/seeHistorImagesPage">历史视频数据</a>
                         </li>
                     </ul>
                 </li>

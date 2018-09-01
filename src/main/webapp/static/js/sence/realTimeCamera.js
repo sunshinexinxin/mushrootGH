@@ -104,7 +104,7 @@ function sendCanvasIamge() {
             alert("上传成功！");
             $('#id5').hide();
             // console.log(result.data);
-            $('#id8').attr('src', result.data);
+            $('#id8').attr('src', image);
             $('#id8').show();
 
         },

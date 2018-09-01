@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -66,8 +67,10 @@ public class MonitoringCenterCrontroller {
     @ResponseBody
     @RequestMapping(value = "/seeHistorImages", method = RequestMethod.GET)
     @ApiOperation(value = "查看历史视频截图", response = ResponseBean.class)
-    public ResponseBean seeHistorImages() {
-        List<MonitoringCenter> images = monitorManagementService.getImagesById("22010001"); //TODO 遗留
+    public ResponseBean seeHistorImages(HttpServletRequest request) {
+        //TODO 遗留
+        String userId = "22010001";
+        List<MonitoringCenter> images = monitorManagementService.getImagesById(userId);
         if (images != null && images.size() == 0) {
             return new ResponseBean("201", "无数据");
         }
@@ -93,6 +96,6 @@ public class MonitoringCenterCrontroller {
     @RequestMapping(value = "/seeHistorImagesPage", method = RequestMethod.GET)
     @ApiOperation(value = "历史视频截图页面", response = String.class)
     public String seeHistorImagesPage() {
-        return "/seeHistorImagesPage";
+        return "/sence/seeHistorImage";
     }
 }

@@ -2,7 +2,6 @@
  * Created by anke on 2017/11/22.
  */
 window.onload = function () {
-
     // $(document).ready(function () {
     $("#selectReport").live('click', function () {
         var pointId = $("#pointId").val();
