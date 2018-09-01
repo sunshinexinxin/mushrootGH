@@ -157,7 +157,7 @@ function pieChart() {
             }
             option2 = {
                 title: {
-                    text: '大棚作物分布',
+                    text: '基地作物分布',
                     subtext: '饼图',
                     x: 'center'
                 },
@@ -168,7 +168,7 @@ function pieChart() {
                 legend: {
                     orient: 'vertical',
                     left: 'left',
-                    data: ['花卉', '农业服务', '市场零售', '种植加工', '农副产品加工']
+                    data: ['双孢蘑菇', '田头菇', '小火焰菇', '香菇', '猴头菇']
                 },
                 series: [
                     {
@@ -177,11 +177,11 @@ function pieChart() {
                         radius: '55%',
                         center: ['50%', '60%'],
                         data: [
-                            {value: 335, name: '畜牧服务'},
-                            {value: 310, name: '农业服务'},
-                            {value: 234, name: '市场零售'},
-                            {value: 135, name: '种植加工'},
-                            {value: 1548, name: '农副产品加工'}
+                            {value: 335, name: '双孢蘑菇'},
+                            {value: 310, name: '田头菇'},
+                            {value: 234, name: '小火焰菇'},
+                            {value: 135, name: '香菇'},
+                            {value: 1548, name: '猴头菇'}
                         ],
                         itemStyle: {
                             emphasis: {

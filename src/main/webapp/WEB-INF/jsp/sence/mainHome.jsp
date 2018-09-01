@@ -20,6 +20,26 @@
 <div class="warp">
     <!--头部开始-->
     <div class="top_c">
+
+        <%--天气插件--%>
+            <div id="tp-weather-widget" align="center"></div>
+            <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+            <script>tpwidget("init", {
+                "flavor": "slim",
+                "location": "WWCJN0RMDUFV",
+                "geolocation": "disabled",
+                "language": "zh-chs",
+                "unit": "c",
+                "theme": "chameleon",
+                "container": "tp-weather-widget",
+                "bubble": "enabled",
+                "alarmType": "badge",
+                "color": "#FFFFFF",
+                "uid": "UCDB687F69",
+                "hash": "7a2153e63fc40c284eddabf4e80f18b0"
+            });
+            tpwidget("show");</script>
+
         <div class="top-menu">
             <ul class="top-menu-nav">
                 <li>
@@ -136,7 +156,7 @@
         </h1>
         <div class="acc">
             <div>
-                <a class="one" id="left1"><span id="span1">数据查询模块</span></a>
+                <a class="one" id="left1"><span id="span1">数据查询</span></a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
@@ -159,7 +179,7 @@
                 </ul>
             </div>
             <div>
-                <a class="one" id="left2">预警分析模块</a>
+                <a class="one" id="left2">预警分析</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -172,24 +192,24 @@
                 </ul>
             </div>
             <div>
-                <a class="one" id="left3">行业资讯模块</a>
+                <a class="one" id="left3">行业资讯</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">天气数据</a>
+                                              href="/static/mushRootNews/mrhistory.html">食用菌文化</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">农产品价格行情</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mushRooMtech.html">食用菌培植技术</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">食用菌行业新闻</a>
+                        <%--<b class="tip"></b><a target="Conframe" href="http://www.hebsyj.com/zixunzhongxin/">食用菌行业新闻</a>--%>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/zixun.html">食用菌行业新闻</a>
+                        <%--<b class="tip"></b><a target="Conframe" href="/static/industryInformation/industryInfomation.html">食用菌行业新闻</a>--%>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left4">基地管理模块</a>
+                <a class="one" id="left4">基地管理</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -209,7 +229,7 @@
                 <input type="hidden" id="role" value="${userBean.getRole()}">
             </div>
             <div>
-                <a class="one" id="left5">系统管理模块</a>
+                <a class="one" id="left5">系统管理</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -219,10 +239,10 @@
                         <b class="tip"></b><a target="Conframe"
                                               href="/mushRoomGH/baseManagePage">基地管理</a>
                     </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/logManagePage">日志管理</a>
-                    </li>
+                    <%--<li>--%>
+                        <%--<b class="tip"></b><a target="Conframe"--%>
+                                              <%--href="/mushRoomGH/logManagePage">日志管理</a>--%>
+                    <%--</li>--%>
                 </ul>
             </div>
             <div id="datepicker"></div>
