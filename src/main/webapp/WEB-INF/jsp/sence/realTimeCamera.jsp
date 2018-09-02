@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8"/>
     <title></title>
@@ -17,15 +17,27 @@
         </div>
         <div id="id4">
             <button id="paizhao" class="btn btn-primary">拍照</button>
+            <button id="cancle" class="btn btn-primary">取消</button>
         </div>
     </div>
-    <div id="id5">
+    <div id="id5" style="display: none">
         <div id="id6">
             <canvas id="canvas" width="640" height="480"></canvas>
+            <input id='imgBase' value='' type="hidden">
+            <input id='imgMushRoom' value='' type="hidden">
+            <input id='userName' value='${userBean.getUserName()}' type="hidden">
+            <input id='userId' value='${userBean.getUserId()}' type="hidden">
         </div>
         <div id="id7">
-            <button id="downImg" onClick="downloadCanvasIamge()" type="button" class="btn btn-primary">下载图片</button>
+            <button id="sendImg" onClick="sendCanvasIamge()" type="button" class="btn btn-primary">上传图片</button>
         </div>
+    </div>
+</div>
+
+
+<div>
+    <div id='img'>
+        <img id='id8' width="640" height="480" src="" style="display: none"/>
     </div>
 </div>
 </body>

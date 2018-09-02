@@ -20,6 +20,26 @@
 <div class="warp">
     <!--头部开始-->
     <div class="top_c">
+
+        <%--天气插件--%>
+            <div id="tp-weather-widget" align="center"></div>
+            <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+            <script>tpwidget("init", {
+                "flavor": "slim",
+                "location": "WWCJN0RMDUFV",
+                "geolocation": "disabled",
+                "language": "zh-chs",
+                "unit": "c",
+                "theme": "chameleon",
+                "container": "tp-weather-widget",
+                "bubble": "enabled",
+                "alarmType": "badge",
+                "color": "#FFFFFF",
+                "uid": "UCDB687F69",
+                "hash": "7a2153e63fc40c284eddabf4e80f18b0"
+            });
+            tpwidget("show");</script>
+
         <div class="top-menu">
             <ul class="top-menu-nav">
                 <li>
@@ -32,16 +52,13 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <a target="Conframe"
-                               href="/static/main/Template/find-order.html">预留菜单</a>
+                            <a target="Conframe" href="/static/main/Template/find-order.html">预留菜单</a>
                         </li>
                         <li>
-                            <a target="Conframe"
-                               href="/static/main/Template/find-1.html">预留菜单</a>
+                            <a target="Conframe" href="/static/main/Template/find-1.html">预留菜单</a>
                         </li>
                         <li>
-                            <a target="Conframe"
-                               href="/static/main/Template/find-2.html">预留菜单</a>
+                            <a target="Conframe" href="/static/main/Template/find-2.html">预留菜单</a>
                         </li>
                     </ul>
                 </li>
@@ -50,12 +67,10 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
+                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Maintain-edit.html">历史视频数据</a>
+                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/seeHistorImagesPage">历史视频数据</a>
                         </li>
                     </ul>
                 </li>
@@ -64,28 +79,23 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/TemplatmushroomGreenHouseGraduateDesignaster-slave.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/TemplatmushroomGreenHouseGraduateDesignaster-slave.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-collapse.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-collapse.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-tabs.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-tabs.html">预留菜单</a>
                         </li>
                         <li>
                             <b class="tip"></b><a target="Conframe"
                                                   href="/static/main/Template/form-tree.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-guide.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-guide.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-tabs-list.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-tabs-list.html">预留菜单</a>
                         </li>
                     </ul>
                 </li>
@@ -94,28 +104,23 @@
                     </a>
                     <ul class="kidc">
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
                             <b class="tip"></b><a target="Conframe"
                                                   href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                         <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
+                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
                         </li>
                     </ul>
                 </li>
@@ -124,7 +129,7 @@
         <div class="top-nav">
             欢迎您，${userName}！&nbsp;&nbsp;
             <a href="/mushRoomGH/userInfoPage" target="Conframe">个人中心</a> |
-            <a href="/mushRoomGH/login">安全退出</a>
+            <a href="/mushRoomGH/logout">安全退出</a>
         </div>
     </div>
     <!--头部结束-->
@@ -136,113 +141,83 @@
         </h1>
         <div class="acc">
             <div>
-                <a class="one" id="left1"><span id="span1">数据报表统计</span></a>
+                <a class="one" id="left1"><span id="span1">数据查询</span></a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe"
-                           href="/mushRoomGH/echarts_bingtu">饼图统计</a>
+                        <a target="Conframe" href="/mushRoomGH/dataReportPage">数据报表</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe"
-                           href="/static/main/Template/echarts_duiji.jsp">统计分析</a>
+                        <a target="Conframe" href="/mushRoomGH/chartsPage">数据可视化</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">温度展示</a>
+                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">报表导出</a>
+                    </li>
+                    <li>
+                        <b class="tip"></b>
+                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">历史数据维护</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left2">实时数据查询</a>
+                <a class="one" id="left2">预警分析</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/mushRoomGH/form-collapse">空气温度</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/dataMonitor/dataMonitor.html">数据监测</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/form-guide.html">土壤湿度</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Maintain-del.html">光照强度</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Maintain-del.html">二氧化碳含量</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-guide.html">实施报警</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left3">预警规则管理</a>
+                <a class="one" id="left3">行业资讯</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预警规则制定</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mrhistory.html">食用菌文化</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">责任人指定</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mushRooMtech.html">食用菌培植技术</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/Alert.html">预留菜单</a>
+                        <%--<b class="tip"></b><a target="Conframe" href="http://www.hebsyj.com/zixunzhongxin/">食用菌行业新闻</a>--%>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/zixun.html">食用菌行业新闻</a>
+                        <%--<b class="tip"></b><a target="Conframe" href="/static/industryInformation/industryInfomation.html">食用菌行业新闻</a>--%>
                     </li>
                 </ul>
             </div>
             <div>
-                <a class="one" id="left4">远程设备管理</a>
+                <a class="one" id="left4">基地管理</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/order.html">修改设备编号</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/order.html">数据自动采集</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">修改设备名称</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">设备远程控制</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">预留菜单</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">预留菜单</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">预留菜单</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <input type="hidden" id="status" value="${userBean.getStatus()}">
+                <input type="hidden" id="role" value="${userBean.getRole()}">
             </div>
             <div>
-                <a class="one" id="left5">系统后台管理</a>
+                <a class="one" id="left5">系统管理</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/usersManage.action">系统用户配置</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/userManagePage">用户管理</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">修改个人信息</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/baseManagePage">基地管理</a>
                     </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/static/main/Template/formstyle.html">预留菜单</a>
-                    </li>
+                    <%--<li>--%>
+                        <%--<b class="tip"></b><a target="Conframe"--%>
+                                              <%--href="/mushRoomGH/logManagePage">日志管理</a>--%>
+                    <%--</li>--%>
                 </ul>
             </div>
             <div id="datepicker"></div>
@@ -271,7 +246,7 @@
     <!--底部结束-->
 </div>
 
-<script type="text/javascript" src="/static/js/sence/charts/mainHome.js"></script>
+<script type="text/javascript" src="/static/js/sence/mainHome.js"></script>
 
 </body>
 </html>

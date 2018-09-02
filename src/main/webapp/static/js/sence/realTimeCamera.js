@@ -56,32 +56,61 @@ var context = canvas.getContext("2d");
 //利用canvas 将当前video的画面画到canvas标签节点中
 document.getElementById("paizhao").addEventListener("click", function () {
     context.drawImage(video, 0, 0, 640, 480);
-    $("#downImg").show();
+    $('#id5').show();
+    $("#sendImg").show();
+});
+
+//取消拍照
+$('#cancle').on("click", function () {
+    $('#id5').hide();
 });
 
 
-// 下载Canvas元素的图片
-function downloadCanvasIamge() {
-    // 通过选择器获取canvas元素
-    var canvas = document.querySelector('canvas');
-    // 使用toDataURL方法将图像转换被base64编码的URL字符串
-    var url = canvas.toDataURL('image/png');
-    // 生成一个a元素
-    var a = document.createElement('a');
-    // 创建一个单击事件
-    var event = new MouseEvent('click');
-
-    // 将a的download属性设置为我们想要下载的图片名称，若name不存在则使用‘下载图片名称’作为默认名称
-    a.download = '图片_' + Date.parse(new Date());
-    // 将生成的URL设置为a.href属性
-    a.href = url;
-
-    // 触发a的单击事件
-    a.dispatchEvent(event);
+//canvas to an image
+function convertCanvasToImage(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL("image/png");
+    return image.src;
 }
 
-// 调用方式
-// 参数一： 选择器，代表canvas
-// 参数二： 图片名称，可选
-// downloadCanvasIamge('canvas', '图片名称');
+// 上传Canvas元素的图片
+function sendCanvasIamge() {
+    var time = Date.parse(new Date());
 
+    var image = convertCanvasToImage(canvas);
+    var imgBase = $('#imgBase').val();
+    var imgMushRoom = $('#imgMushRoom').val();
+    var imgName = "img_" + time;
+    var imgUserName = $('#userName').val();
+    var imgUserId = $('#userId').val();
+    var imgTime = time;
+    var imgMess = $('#imgMess').val();
+    $.ajax({
+        type: 'POST',
+        url: "/mushRoomGH/sendCanvasIamge",
+        data: {
+            image: image,
+            imgBase: imgBase,
+            imgMushRoom: imgMushRoom,
+            imgName: imgName,
+            imgUserName: imgUserName,
+            imgUserId: imgUserId,
+            imgTime: imgTime,
+            imgMess: imgMess
+        },
+        dataType: "JSON",
+        async: false,
+        success: function (result) {
+            alert("上传成功！");
+            $('#id5').hide();
+            // console.log(result.data);
+            $('#id8').attr('src', image);
+            $('#id8').show();
+
+        },
+        error: function (data) {
+            console.log(data);
+            alert("error");
+        }
+    });
+}

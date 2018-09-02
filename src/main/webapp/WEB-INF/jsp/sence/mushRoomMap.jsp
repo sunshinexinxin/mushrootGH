@@ -22,9 +22,7 @@
 
 </head>
 <body>
-<div id="allmap">
-    <%--<input type="hidden" id="resuData" value=${resuData}/>--%>
-</div>
+<div id="allmap"></div>
 <script type="text/javascript" src="/static/js/sence/mushRoomMap.js"></script>
 </body>
 </html>

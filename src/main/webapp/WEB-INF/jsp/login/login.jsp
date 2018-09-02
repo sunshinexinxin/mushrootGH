@@ -68,12 +68,12 @@
     </div>
     <br><br><br>
     <span>
-        <form action="/mushRoomGH/login/" method="post">
+        <form action="/mushRoomGH/login" method="post">
             <input type="text" name="userName" id="userName" value="" placeholder="用户名"/>
             <input type="password" name="userPwd" id="userPwd" value="" placeholder="密&nbsp码"/><br/>
             <input type="submit" value="登录" class='btn btn-default btn-lg' id="login"/>
             <!--<button class="btn btn-default btn-lg" id="login">登录</button>-->
-            <%--<input type="hidden" id="data" value="${resuData.getStatus()}"/>--%>
+            <%--<input type="hidden" id="data" value="${responseBean.getStatus()}"/>--%>
         </form>
     </span>
     <p>
