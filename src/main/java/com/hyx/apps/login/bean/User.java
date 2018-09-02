@@ -1,35 +1,61 @@
 package com.hyx.apps.login.bean;
 
-import com.hyx.apps.sence.bean.Monitor;
+import com.hyx.apps.map.bean.Monitor;
 
+/**
+ * @author anke
+ */
 public class User {
 
-    //用户id
+    /**
+     * 用户id
+     */
     private String userId;
-    //用户姓名
+    /**
+     * 用户姓名
+     */
     private String userName;
-    //用户年龄
+    /**
+     * 用户年龄
+     */
     private String userAge;
-    //用户密码
+    /**
+     * 用户密码
+     */
     private String userPsd;
-    //用户联系方式
+    /**
+     * 用户联系方式
+     */
     private String userPhone;
-    //用户地址
+    /**
+     * 用户地址
+     */
     private String userAdd;
-    //用户身份标识.0:开发测试;1:普通用户;2:管理员
-    private String status;
-    //删除标识.初始为0;删除为1.
+    /**
+     * 用户身份标识.0:开发测试;1:普通用户;2:管理员
+     */
+    private String role;
+    /**
+     * 删除标识.初始为0;删除为1.
+     */
     private String delFlag;
-    //备注
+    /**
+     * 备注
+     */
     private String memo;
-    //创建时间
+    /**
+     * 创建时间
+     */
     private String ctime;
 
-    //大棚监控点
+    /**
+     * 大棚监控点
+     */
     private Monitor monitor;
-    //统计
+    /**
+     * 统计
+     */
     private Monitor coun;
-
 
     public String getUserId() {
         return userId;
@@ -79,12 +105,12 @@ public class User {
         this.userAdd = userAdd;
     }
 
-    public String getStatus() {
-        return status;
+    public String getRole() {
+        return role;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getDelFlag() {
@@ -136,7 +162,7 @@ public class User {
                 ", userPsd='" + userPsd + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userAdd='" + userAdd + '\'' +
-                ", status='" + status + '\'' +
+                ", role='" + role + '\'' +
                 ", delFlag='" + delFlag + '\'' +
                 ", memo='" + memo + '\'' +
                 ", ctime='" + ctime + '\'' +

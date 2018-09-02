@@ -16,7 +16,7 @@ window.onload = function () {
             // password: password
         },
         success: function (data, flag) {
-            console.log(data.data);
+            // console.log(data.data);
             map = new BMap.Map("allmap");    // 创建Map实例
             pointCent = new BMap.Point(114.2009851142, 38.8555280387);  //创建地图中心点位置，写死即可
             map.centerAndZoom(pointCent, 17);

@@ -297,15 +297,20 @@ public class CommonUtil {
     }
 
     /**
-     * 转换为日期格式yyyy-MM-dd hh42:mi:ss add by zqb 2015年4月9日14:35:21
+     * 转换为日期格式yyyy-MM-dd hh:mm:ss add by zqb 2015年4月9日14:35:21
      *
      * @param newDate
      * @return
      */
     public static String formatdate19(Date newDate) {
         SimpleDateFormat dateFormat = new SimpleDateFormat(
-                "yyyy-MM-dd hh42:mi:ss");
+                "yyyy-MM-dd HH:mm:ss");
         String date = dateFormat.format(newDate);
+        return date;
+    }
+
+    public static Date str2data(String str) {
+        Date date = new Date(Long.parseLong(str));
         return date;
     }
 
@@ -408,5 +413,11 @@ public class CommonUtil {
             return map.isEmpty();
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        Date date = str2data("1524132368000");
+        String s = formatdate19(date);
+        System.out.println(s);
     }
 }
