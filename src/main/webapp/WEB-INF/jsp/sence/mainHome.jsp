@@ -47,83 +47,10 @@
                         <p>首页</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">信息发布<i class="tip-up"></i>
-                    </a>
-                    <ul class="kidc">
-                        <li>
-                            <a target="Conframe" href="/static/main/Template/find-order.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <a target="Conframe" href="/static/main/Template/find-1.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <a target="Conframe" href="/static/main/Template/find-2.html">预留菜单</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">监控中心<i class="tip-up"></i>
-                    </a>
-                    <ul class="kidc">
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/mushRoomGH/seeHistorImagesPage">历史视频数据</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">系统管理<i class="tip-up"></i>
-                    </a>
-                    <ul class="kidc">
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/TemplatmushroomGreenHouseGraduateDesignaster-slave.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-collapse.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-tabs.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/form-tree.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-guide.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-tabs-list.html">预留菜单</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">关于<i class="tip-up"></i>
-                    </a>
-                    <ul class="kidc">
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/static/main/Template/Alert.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe" href="/static/main/Template/Alert.html">预留菜单</a>
-                        </li>
-                    </ul>
-                </li>
+
+
+
+
             </ul>
         </div>
         <div class="top-nav">
@@ -145,7 +72,7 @@
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushRoomGH/dataReportPage">数据报表</a>
+                        <a target="Conframe" href="/mushRoomGH/dataReportPage">历史数据查询</a>
                     </li>
                     <li>
                         <b class="tip"></b>
@@ -153,12 +80,13 @@
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">报表导出</a>
+                        <a target="Conframe" href="/mushRoomGH/realTimeCameraPage">实时视频数据</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushRoomGH/echarts_temp_wetPage">历史数据维护</a>
+                        <a target="Conframe" href="/mushRoomGH/seeHistorImagesPage">历史视频数据</a>
                     </li>
+
                 </ul>
             </div>
             <div>
@@ -192,14 +120,12 @@
                 <a class="one" id="left4">基地管理</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/order.html">数据自动采集</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/baseManagePage">基地管理</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">设备远程控制</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">大棚管理</a>
                     </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">预留菜单</a>
-                    </li>
+
                 </ul>
             </div>
             <div>
