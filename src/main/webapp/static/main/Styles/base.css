@@ -221,7 +221,7 @@ a:link {
 /*被访问过链接*/
 a:visited {
     text-decoration: none; /*下划线*/
-    color: #000000; /*颜色*/
+    /*color: #000000; /*颜色*/
 }
 
 /*鼠标经过*/
