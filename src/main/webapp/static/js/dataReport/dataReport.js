@@ -8,7 +8,7 @@ window.onload = function () {
         var beginDate = $("#beginDate").val();
         var endDate = $("#endDate").val();
         // 清空表格
-        $("#top_table  tr:not(:first)").empty("");
+        // $("#top_table tr:not(:first)").html("");
         $.ajax({
             url: "/mushRoomGH/dataReport",
             type: "GET",
@@ -40,10 +40,10 @@ window.onload = function () {
                     });
                 } else if (data.data.length === 0) {
                     var tab = '<tr align="center"><td>查询数据为空</td></tr>';
+                    $('#top_table').append(tab);
                 } else if (data.code == 2002) {
                     alert(data.message)
                 }
-                $('#top_table').append(tab);
             },
             error: function (data, flag) {
                 console.log(data);
