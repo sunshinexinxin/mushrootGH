@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<div class="alert alert-info">首页<b class="tip"></b>数据查询模块<b class="tip"></b>饼图折线图</div>
+<div class="alert alert-info">首页<b class="tip"></b>数据查询<b class="tip"></b>饼图折线图</div>
 
 <div class="container-fluid">
     <div class="row-fluid">

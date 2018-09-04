@@ -93,7 +93,7 @@
                 <a class="one" id="left2">预警分析</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe" href="/static/dataMonitor/dataMonitor.html">数据监测</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/dataMonitorPage">数据监测</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe" href="/static/main/Template/form-guide.html">实施报警</a>
