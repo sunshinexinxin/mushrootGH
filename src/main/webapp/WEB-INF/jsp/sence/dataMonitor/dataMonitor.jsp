@@ -18,26 +18,17 @@
     <div class="con2-top">
         <h2>上层</h2>
         <ul class="clearfix">
-            <li>
-                <a href="#">
-                <div id="myChart1s" style="width: 400px;height:400px;"></div>
-                    <%--<div id="myChart1s"><img alt="" src="/static/dataMonitor/images/tyellow.png"/></div>--%>
-
-                    <%--<div id="myChart1s"></div>--%>
-                </a>
-                <p>1</p>
+            <li style="width: 400px;height:300px;" align="center">
+                <div id="myChart1s" style="width: 100%;height:100%;" align="center"></div>
             </li>
-            <li class="cen">
-                <a href="###">
-                    <div><img alt="" src="/static/dataMonitor/images/torange.png"/></div>
-                </a>
-                <p>2</p>
+            <li class="cen" style="width: 280px;height:300px;" align="center">
+                <div>
+                    <p>74%</p>
+                    <img alt="" src="/static/dataMonitor/images/torange.png"/>
+                </div>
             </li>
-            <li>
-                <a href="###">
-                    <div><img alt="" src="/static/dataMonitor/images/tgreen.png"/></div>
-                </a>
-                <p>3</p>
+            <li style="width: 400px;height:300px;" align="center">
+                <div id="myChart2s" style="width: 100%;height:100%;" align="center"></div>
             </li>
         </ul>
         <div class="con2-bottom">
@@ -45,31 +36,41 @@
             <ul class="clearfix">
                 <li>
                     <a href="###">
-                        <div><canvas id="dowebok1"></canvas></div>
+                        <div>
+                            <canvas id="dowebok1"></canvas>
+                        </div>
                     </a>
                     <p>空气温度</p>
                 </li>
                 <li class="cen">
                     <a href="###">
-                        <div><canvas id="dowebok2"></canvas></div>
+                        <div>
+                            <canvas id="dowebok2"></canvas>
+                        </div>
                     </a>
                     <p>空气湿度</p>
                 </li>
                 <li>
                     <a href="###">
-                        <div><canvas id="dowebok3"></canvas></div>
+                        <div>
+                            <canvas id="dowebok3"></canvas>
+                        </div>
                     </a>
                     <p>土壤温度</p>
                 </li>
                 <li class="cen">
                     <a href="###">
-                        <div><canvas id="dowebok4"></canvas></div>
+                        <div>
+                            <canvas id="dowebok4"></canvas>
+                        </div>
                     </a>
                     <p>土壤湿度</p>
                 </li>
                 <li>
                     <a href="###">
-                        <div><canvas id="dowebok5"></canvas></div>
+                        <div>
+                            <canvas id="dowebok5"></canvas>
+                        </div>
                     </a>
                     <p>光照强度</p>
                 </li>
