@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>蘑菇大棚监控平台</title>
+    <title>食用菌智慧农业系统</title>
     <link rel="shortcut icon" href="/static/image/favicon.ico"/>
     <link href="/static/login/css/style.css" rel="stylesheet"
           type="text/css" media="all"/>
@@ -63,7 +63,7 @@
             </script>
         </div>
         <h3>
-            蘑菇大棚监控平台
+            食用菌智慧农业系统
         </h3>
     </div>
     <br><br><br>
