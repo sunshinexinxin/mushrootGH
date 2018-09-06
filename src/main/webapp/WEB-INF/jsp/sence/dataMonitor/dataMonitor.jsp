@@ -22,9 +22,11 @@
                 <div id="myChart1s" style="width: 100%;height:100%;" align="center"></div>
             </li>
             <li class="cen" style="width: 280px;height:300px;" align="center">
-                <div>
-                    <p>74%</p>
-                    <img alt="" src="/static/dataMonitor/images/torange.png"/>
+                <div style="position:relative;">
+                    　　<img src="/static/dataMonitor/images/torange.png" />
+                    　　<div style="position:absolute; top:50px;left:120px;">
+                        <p>74%</p>
+                        </div>
                 </div>
             </li>
             <li style="width: 400px;height:300px;" align="center">
@@ -35,44 +37,44 @@
             <h2>下层</h2>
             <ul class="clearfix">
                 <li>
-                    <a href="###">
-                        <div>
-                            <canvas id="dowebok1"></canvas>
+                    <canvas id="dowebok1"></canvas>
+                    <div style="position:relative;">
+                       <div style="position:absolute; top:-60px;left:60px;">
+                        <a>空气温度</a>
                         </div>
-                    </a>
-                    <p>空气温度</p>
+                    </div>
                 </li>
                 <li class="cen">
-                    <a href="###">
-                        <div>
-                            <canvas id="dowebok2"></canvas>
+                    <canvas id="dowebok2"></canvas>
+                    <div style="position:relative;">
+                        <div style="position:absolute; top:-60px;left:60px;">
+                            <a>空气湿度</a>
                         </div>
-                    </a>
-                    <p>空气湿度</p>
+                    </div>
                 </li>
                 <li>
-                    <a href="###">
-                        <div>
-                            <canvas id="dowebok3"></canvas>
+                    <canvas id="dowebok3"></canvas>
+                    <div style="position:relative;">
+                        <div style="position:absolute; top:-60px;left:60px;">
+                            <a>土壤温度</a>
                         </div>
-                    </a>
-                    <p>土壤温度</p>
+                    </div>
                 </li>
                 <li class="cen">
-                    <a href="###">
-                        <div>
-                            <canvas id="dowebok4"></canvas>
+                    <canvas id="dowebok4"></canvas>
+                    <div style="position:relative;">
+                        <div style="position:absolute; top:-60px;left:60px;">
+                            <a>土壤湿度</a>
                         </div>
-                    </a>
-                    <p>土壤湿度</p>
+                    </div>
                 </li>
                 <li>
-                    <a href="###">
-                        <div>
-                            <canvas id="dowebok5"></canvas>
+                    <canvas id="dowebok5"></canvas>
+                    <div style="position:relative;">
+                        <div style="position:absolute; top:-60px;left:60px;">
+                            <a>光照强度</a>
                         </div>
-                    </a>
-                    <p>光照强度</p>
+                    </div>
                 </li>
             </ul>
         </div>
