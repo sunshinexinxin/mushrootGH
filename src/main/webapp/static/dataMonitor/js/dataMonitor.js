@@ -246,7 +246,7 @@ setInterval(function () {
         data.push(randomData());
     }
 
-    myChart.setOption({
+    myChart2.setOption({
         series: [{
             data: data
         }]
