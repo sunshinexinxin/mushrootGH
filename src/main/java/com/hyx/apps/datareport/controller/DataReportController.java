@@ -43,12 +43,12 @@ public class DataReportController {
     @ResponseBody
     @RequestMapping(value = "/foldLineDiagram", method = RequestMethod.GET)
     @ApiOperation(value = "温度展示", response = ResponseBean.class)
-    public ResponseBean tempWetData() {
+    public ResponseBean foldLineDiagram() {
         logger.info("数据报表统计-温度展示");
         //TODO 该方法的逻辑还有问题，js页面需要修改
         List<User> userPointidMap = (List<User>) SecurityUtil.getCurrentUser("userPointidMap");
         logger.info(userPointidMap);
-        List<ChartsCollectionBean> tempWetList = dataReportService.getTempWetListById("21006");
+        List<ChartsCollectionBean> tempWetList = dataReportService.getTempWetListById("00011");
         return new ResponseBean(tempWetList);
     }
 
