@@ -104,7 +104,7 @@
                 <a class="one" id="left3">行业资讯</a>
                 <ul class="kid">
                     <li>
-                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mrhistory.html">食用菌文化</a>
+                        <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mrhistory2.html">食用菌文化</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe" href="/static/mushRootNews/mushRooMtech.html">食用菌培植技术</a>
