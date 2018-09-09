@@ -138,7 +138,7 @@
                         <b class="tip"></b><a target="Conframe" href="/mushRoomGH/userManagePage">用户管理</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/baseManagePage">基地管理</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/deviceManagePage">设备管理</a>
                     </li>
                     <%--<li>--%>
                         <%--<b class="tip"></b><a target="Conframe"--%>
