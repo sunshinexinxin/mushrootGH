@@ -229,4 +229,14 @@ public class SystemManageController {
     public String logManagePage() {
         return "/systemManage/logManage";
     }
+
+    /**
+     * 系统管理模块-设备管理
+     *
+     * @return
+     */
+    @RequestMapping(value = "/deviceManagePage", method = RequestMethod.GET)
+    public String deviceManagePage() {
+        return "/systemManage/deviceManage";
+    }
 }
