@@ -16,7 +16,7 @@
 
 <div class="con2 clearfix wrap">
     <div class="con2-top">
-        <h2>上层</h2>
+        <h2>一级指数</h2>
         <ul class="clearfix">
             <li style="width: 400px;height:300px;" align="center">
                 <div id="myChart1s" style="width: 100%;height:100%;" align="center"></div>
@@ -34,7 +34,7 @@
             </li>
         </ul>
         <div class="con2-bottom">
-            <h2>下层</h2>
+            <h2>二级指数</h2>
             <ul class="clearfix">
                 <li>
                     <canvas id="dowebok1"></canvas>

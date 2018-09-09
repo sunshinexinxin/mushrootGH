@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/main/min/Styles/admin-all.css"/>
 </head>
 <body>
-<div class="alert alert-info">当前位置<b class="tip"></b>监控中心<b class="tip"></b>实时视频数据</div>
+<div class="alert alert-info">当前位置<b class="tip"></b>监控中心<b class="tip"></b>历史视频数据</div>
 <div id="id1">
     <img id='id2' width="640" height="480" src="" style="display: none"/>
 </div>
