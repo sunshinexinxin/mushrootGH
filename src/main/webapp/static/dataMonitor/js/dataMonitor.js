@@ -14,7 +14,7 @@ $(function () {
     $('#dowebok2').waterbubble({
         txt: '36.8%',
         data: 0.368,
-        textColor: 'rgba(0, 0, 0, 0.8)',
+        waterColor: '#2fee37',
         animation: true
 
     });
@@ -34,7 +34,7 @@ $(function () {
     $('#dowebok4').waterbubble({
         txt: '54.2%',
         data: 0.542,
-        waterColor: '#2fee37',
+        textColor: 'rgba(0, 0, 0, 0.8)',
         animation: true
 
     });
@@ -44,7 +44,7 @@ $(function () {
     $('#dowebok5').waterbubble({
         txt: '38.4%',
         data: 0.384,
-        textColor: 'rgba(0, 0, 0, 0.8)',
+        waterColor: '#2fee37',
         animation: true
 
     });
