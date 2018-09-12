@@ -239,4 +239,14 @@ public class SystemManageController {
     public String deviceManagePage() {
         return "/systemManage/deviceManage";
     }
+
+    /**
+     * 系统管理模块-大棚管理
+     *
+     * @return
+     */
+    @RequestMapping(value = "/houseManagePage", method = RequestMethod.GET)
+    public String houseManagePage() {
+        return "/systemManage/houseManage";
+    }
 }
