@@ -1,6 +1,6 @@
 $(function () {
     $('#dowebok1').waterbubble({
-        txt: '74.8%',
+        txt: '79.8%',
         data: 0.748,
         // textColor: 'rgba(0, 0, 0, 0.8)',
         waterColor: '#EEAD0E',
@@ -22,7 +22,7 @@ $(function () {
 
 $(function () {
     $('#dowebok3').waterbubble({
-        txt: '84.3%',
+        txt: '86.3%',
         data: 0.843,
         waterColor: '#CD2626',
         animation: true
@@ -32,7 +32,7 @@ $(function () {
 
 $(function () {
     $('#dowebok4').waterbubble({
-        txt: '54.2%',
+        txt: '64.2%',
         data: 0.542,
         textColor: 'rgba(0, 0, 0, 0.8)',
         animation: true

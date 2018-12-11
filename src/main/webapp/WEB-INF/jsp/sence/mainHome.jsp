@@ -84,7 +84,7 @@
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushRoomGH/seeHistorImagesPage">历史视频数据</a>
+                        <a target="Conframe" href="/mushRoomGH/seeHistorImagesPage">现场视频数据</a>
                     </li>
 
                 </ul>
@@ -123,7 +123,7 @@
                         <b class="tip"></b><a target="Conframe" href="/mushRoomGH/baseManagePage">基地管理</a>
                     </li>
                     <li>
-                        <b class="tip"></b><a target="Conframe" href="/static/main/Template/formstyle.html">大棚管理</a>
+                        <b class="tip"></b><a target="Conframe" href="/mushRoomGH/houseManagePage">大棚管理</a>
                     </li>
 
                 </ul>
